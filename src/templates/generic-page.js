@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
+
 
 const GenericPage = props => {
   console.log(props)

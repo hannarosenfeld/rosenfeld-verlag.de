@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import { useStaticQuery, Link, graphql } from 'gatsby'
-
+import logo from '../images/rosenfeldverlag.svg'
 import './NavBar.css'
 
 const NavBar = ({ SiteTitle }) => {
@@ -23,7 +23,7 @@ const NavBar = ({ SiteTitle }) => {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="/">Rosenfeld Verlag</Navbar.Brand>
+        <Navbar.Brand className="logo" href="/"><img src={logo} width="205px"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
