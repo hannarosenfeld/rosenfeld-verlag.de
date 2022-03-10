@@ -8,6 +8,10 @@ a {
     text-transform: uppercase;
 }
 
+a:hover {
+    color: rgb(102,153,153) !important;
+}
+
 .navbar .container {
 
 }
