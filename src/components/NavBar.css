@@ -8,6 +8,10 @@ a {
     text-transform: uppercase;
 }
 
+.logo {
+
+}
+
 a:hover, a:active, a:focus {
     color: rgb(102,153,153) !important;
 }
