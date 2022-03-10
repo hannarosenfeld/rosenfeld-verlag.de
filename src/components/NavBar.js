@@ -23,12 +23,12 @@ const NavBar = ({ SiteTitle }) => {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">Rosenfeld Verlag</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {result.datoCmsMenu.menuItems.map(menuItem => (
-              <Nav.Link key={menuItem.originalId} href="#">{menuItem.labelText === "Home" ? "" : menuItem.labelText}</Nav.Link>
+              <Nav.Link key={menuItem.originalId} href={menuItem.destination.slug}>{menuItem.labelText === "Home" ? "" : menuItem.labelText}</Nav.Link>
             ))}
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
