@@ -24,7 +24,7 @@ const NavBar = ({ SiteTitle }) => {
   return (
     <Navbar expand="lg">
       <Container>
-        <Link className="logo" to="#"><img src={logo} width="205px"/></Link>
+        <Link className="logo" alt="logo" to="#"><img src={logo} width="205px"/></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
