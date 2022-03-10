@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
       title: `rosenfeld-verlag.de`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.rosenfeld-verlag.de`
   },
   plugins: [{
     resolve: 'gatsby-source-datocms',

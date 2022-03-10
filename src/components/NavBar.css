@@ -1,0 +1,6 @@
+.navbar .container {
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
