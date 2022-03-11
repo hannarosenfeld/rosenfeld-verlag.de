@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout.js'
+import './autoren.css'
 
 const AutorenPage = props => {
   props.data.allDatoCmsAutor.nodes.map(autor => {
@@ -12,11 +13,12 @@ const AutorenPage = props => {
     <Layout>
       {props.data.allDatoCmsAutor.nodes.map(autor => {
         return(
-          <div>
-          <div className="autoren-container" key={autor.originalId}>
-            <h4>{autor.name}</h4>
+          <div className="autoren-container">
+          <div className="autor-container" key={autor.originalId}>
+            <h5>{autor.name}</h5>
             <p>{autor.beruf}</p>
             <p>{autor.biographie}</p>
+            <Link >...weiterlesen</Link>
           </div>
           </div>
         )
