@@ -20,7 +20,12 @@ const Layout = ({ children }) => {
     <>
       <NavBar/>
       <div>
-        <main style={{width: "90%", margin: "0 auto"}}>{children}</main>
+        <main style={{
+          width: "90%",
+          margin: "0 auto"
+        }}>
+          {children}
+        </main>
         <footer
           style={{
             marginTop: `2rem`,

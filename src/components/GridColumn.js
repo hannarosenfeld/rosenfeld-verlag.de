@@ -12,18 +12,18 @@ const GridColumn = ({ mobileWidth, desktopWidth, tabletWidth, content }) => {
       >
         {contentRendered}
       </div>
-      <div
-        className="grid-col grid-col-tablet"
-        style={{ width: `${tabletWidth}%` }}
-      >
-        {contentRendered}
-      </div>
-      <div
-        className="grid-col grid-col-mobile"
-        style={{ width: `${mobileWidth}%` }}
-      >
-        {contentRendered}
-      </div>
+      {/* <div
+          className="grid-col grid-col-tablet"
+          style={{ width: `${tabletWidth}%` }}
+          >
+          {contentRendered}
+          </div>
+          <div
+          className="grid-col grid-col-mobile"
+          style={{ width: `${mobileWidth}%` }}
+          >
+          {contentRendered}
+          </div> */}
     </>
   )
 }

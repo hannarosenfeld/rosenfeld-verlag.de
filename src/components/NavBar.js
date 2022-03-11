@@ -23,10 +23,10 @@ const NavBar = ({ SiteTitle }) => {
   `)
   return (
     <Navbar expand="lg">
-      <Container>
+      <Container id="navbar-container">
         <Link className="logo" alt="logo" to="#"><img src={logo} width="205px"/></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse-reset">
           <Nav className="m-auto">
             {result.datoCmsMenu.menuItems.map(menuItem => (
               <Link key={menuItem.originalId} to={menuItem.destination.slug}>

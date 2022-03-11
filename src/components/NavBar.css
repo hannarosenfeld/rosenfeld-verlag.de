@@ -17,9 +17,13 @@ a:hover, a:active, a:focus {
 }
 
 .navbar .container {
-
+    padding: 0 1.23em;
 }
 
 .navbar-collapse {
+    flex-grow: 0 !important;
+}
 
+#navbar-container {
+    max-width: 95%;
 }
