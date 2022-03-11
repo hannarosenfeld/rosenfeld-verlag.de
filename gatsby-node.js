@@ -10,17 +10,22 @@ exports.createPages = async ({ actions, graphql }) => {
           originalId
         }
       }
+      allDatoCmsAutor {
+        nodes {
+          originalId
+        }
+      }
     }
-  `)
-
-  console.log(result)
+ `)
 
   result.data.allDatoCmsPage.nodes.forEach(page => {
+    console.log(page.slug)
     createPage({
       path: `/${page.slug === "home" ? "" : page.slug}`,
-      component: require.resolve("./src/templates/generic-page.js"),
+      component: require.resolve(`${page.slug === "autoren" ? "./src/templates/autoren.js" : "./src/templates/generic-page.js"}`),
       context: {
         pageId: page.originalId,
+        autorenId: result.data.allDatoCmsAutor.originalId,
       },
     })
   })
