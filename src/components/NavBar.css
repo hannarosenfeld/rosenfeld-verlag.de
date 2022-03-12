@@ -7,7 +7,6 @@
 }
 
 .navbar .container {
-    padding: 0 1.23em;
 }
 
 .navbar-collapse {
@@ -15,5 +14,6 @@
 }
 
 #navbar-container {
-    max-width: 98%;
+    max-width: 100% !important;
+    padding: 0 !important
 }

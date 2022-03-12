@@ -17,10 +17,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{
-      width: "95%",
-      margin: "0 auto"
-    }}>
+    <div className="inner-body">
       <NavBar/>
       <main >
         {children}

@@ -1,3 +1,18 @@
+body {
+    width: 95%;
+    border: 2px solid red;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-body {
+    border: 2px solid blue;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
 a {
 	color: #000 !important;
     text-decoration: none !important;

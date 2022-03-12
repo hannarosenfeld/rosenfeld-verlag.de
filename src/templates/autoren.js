@@ -12,7 +12,7 @@ const AutorenPage = props => {
   return(
     <Layout>
       <main className="d-flex flex-column">
-        <h3 style={{margin: "2em 0 1em 1.3em"}}>Unsere Autorinnen und Autoren</h3>
+        <h3>Unsere Autorinnen und Autoren</h3>
         <div className="d-flex flex-wrap mt-4 autoren-container">
           {props.data.allDatoCmsAutor.nodes.map(autor => {
             return(
