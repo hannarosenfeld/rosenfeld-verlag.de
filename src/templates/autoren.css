@@ -1,6 +1,4 @@
-.autoren-container {
 
-}
 
 .card {
     border: none !important;
@@ -24,4 +22,44 @@
 
 .card-img {
 
+}
+
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .card {
+        width: 100% !important;
+    }
+    .card-body{
+        width: 100% !important;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .autoren-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100% !important;
+    }
+    .card-body {
+        width: 100% !important;
+    }
+    .card-body img{
+        width: 95%;
+    }
+    .ipad-layout {
+        display: flex;
+    }
+    .ipad-float-left {
+        width: 40%;
+    }
+    .ipad-float-right {
+        margin-top: 4em;
+        width: 60%;
+    }
 }

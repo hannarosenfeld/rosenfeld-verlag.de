@@ -22,16 +22,10 @@ const Layout = ({ children }) => {
       <main >
         {children}
       </main>
-      <footer
-        style={{
-          marginTop: `2rem`,
-          width: "90%",
-          margin: "0 auto",
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
+      <footer>
+        © {new Date().getFullYear()}, Built by
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.hannarosenfeld.com">Hanna Rosenfeld</a>
       </footer>
     </div>
   )
