@@ -10,6 +10,10 @@ const ContentRenderer = ({ content }) => {
         renderBlock={({ record }) => {
           if (record.__typename === "DatoCmsImageInline") {
             return <GatsbyImage image={record.image.gatsbyImageData} />
+          } else if (record.__typename === "DatoCmsYoutubeVideo") {
+            return (
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/OXiThrKeEPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            )
           }
           return null
         }}
