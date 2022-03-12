@@ -17,16 +17,20 @@ const AutorenPage = props => {
           {props.data.allDatoCmsAutor.nodes.map(autor => {
             return(
               <Card className="mb-5" style={{ width: '16rem' }} key={autor.originalId}>
-                <Card.Body className="ipad-layout">
-                  <div className="ipad-float-left">
-                  <Card.Title>{autor.name}</Card.Title>
-                  <Card.Subtitle className="mb-3">{autor.beruf}</Card.Subtitle>
-                  <Card.Img className="mb-3" src={autor.autorenBild.gatsbyImageData.images.fallback.src} />
-                  <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
+                <Card.Body>
+                  <div className="ipad-title">
+                    <Card.Title>{autor.name}</Card.Title>
+                    <Card.Subtitle className="mb-3">{autor.beruf}</Card.Subtitle>
                   </div>
-                  <div className="ipad-float-right">
-                  <Card.Text className="mb-3">{autor.biographieKurz}</Card.Text>
-                  <Card.Link href="#">...weiterlesen</Card.Link>
+                  <div className="ipad-flex">
+                  <div className="ipad-author-picture">
+                    <Card.Img className="mb-3" src={autor.autorenBild.gatsbyImageData.images.fallback.src} />
+                    <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
+                  </div>
+                  <div className="ipad-author-bio">
+                    <Card.Text className="mb-3">{autor.biographieKurz}</Card.Text>
+                    <Card.Link className="ipad-link" href="#">...weiterlesen</Card.Link>
+                  </div>
                   </div>
                 </Card.Body>
               </Card>

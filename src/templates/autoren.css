@@ -52,14 +52,16 @@
     .card-body img{
         width: 95%;
     }
-    .ipad-layout {
+    .ipad-flex {
         display: flex;
     }
-    .ipad-float-left {
+    .ipad-author-picture {
         width: 40%;
     }
-    .ipad-float-right {
-        margin-top: 4em;
+    .ipad-author-bio {
         width: 60%;
+    }
+    .ipad-link {
+        padding: 2em;
     }
 }
