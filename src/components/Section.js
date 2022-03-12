@@ -4,7 +4,8 @@ import GridColumn from "./GridColumn"
 
 const Section = ({ gridColumns }) => {
   return (
-    <div className="section">
+    <div
+      className="section">
       <div className="section-inner">
         {gridColumns.map(gridCol => (
           <GridColumn

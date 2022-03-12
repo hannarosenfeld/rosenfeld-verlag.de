@@ -1,7 +1,7 @@
 .section{
-
+    padding: 3em 2em;
 }
 
-.section-inner{
-
+.section-inner h2 {
+    line-height: 2em;
 }
