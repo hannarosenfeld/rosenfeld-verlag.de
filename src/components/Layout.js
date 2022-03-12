@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from "./NavBar"
-//import "./layout.css"
+import "../styles/global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,28 +17,26 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div style={{
+      width: "95%",
+      margin: "0 auto"
+    }}>
       <NavBar/>
-      <div>
-        <main style={{
+      <main >
+        {children}
+      </main>
+      <footer
+        style={{
+          marginTop: `2rem`,
           width: "90%",
-          margin: "0 auto"
-        }}>
-          {children}
-        </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-            width: "90%",
-            margin: "0 auto",
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+          margin: "0 auto",
+        }}
+      >
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
+    </div>
   )
 }
 

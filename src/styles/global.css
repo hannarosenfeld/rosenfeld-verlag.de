@@ -1,0 +1,8 @@
+a {
+	color: #000 !important;
+    text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+    color: rgb(102,153,153) !important;
+}

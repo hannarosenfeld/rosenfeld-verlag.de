@@ -1,4 +1,28 @@
 .autoren-container {
-    border: 2px solid red;
-    width: 30%;
+    margin: 3em auto;
+    width: 95%;
+}
+
+.card {
+    border: none !important;
+    font-size: 0.9rem;
+}
+
+.card-body {
+    width: 90%;
+    padding: 0.5rem !important;
+}
+
+.card-title {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.card-subtitle {
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+.card-img {
+
 }

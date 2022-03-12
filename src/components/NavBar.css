@@ -1,19 +1,9 @@
 .navbar-collapse-reset a {
-	color: grey !important;
-    text-decoration: none !important;
     padding: 0.3em;
     margin: 0 0.5em;
     font-weight: lighter;
     font-size: 0.85rem;
     text-transform: uppercase;
-}
-
-.logo {
-
-}
-
-a:hover, a:active, a:focus {
-    color: rgb(102,153,153) !important;
 }
 
 .navbar .container {
@@ -25,5 +15,5 @@ a:hover, a:active, a:focus {
 }
 
 #navbar-container {
-    max-width: 95%;
+    max-width: 98%;
 }

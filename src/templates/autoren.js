@@ -11,21 +11,25 @@ const AutorenPage = props => {
 
   return(
     <Layout>
-      <div className="d-flex flex-wrap">
-      {props.data.allDatoCmsAutor.nodes.map(autor => {
-        return(
-          <Card style={{ width: '18rem' }} key={autor.originalId}>
-            <Card.Body>
-              <Card.Title>{autor.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">{autor.beruf}</Card.Subtitle>
-              <Card.Img src={autor.autorenBild.gatsbyImageData.images.fallback.src} />
-              <Card.Text>{autor.biographie}</Card.Text>
-              <Card.Link href="#">...weiterlesen</Card.Link>
-            </Card.Body>
-          </Card>
-        )
-      })}
-      </div>
+      <main className="d-flex flex-column">
+        <h3 style={{margin: "2em 0 1em 1.3em"}}>Unsere Autorinnen und Autoren</h3>
+        <div className="d-flex flex-wrap mt-4 autoren-container">
+          {props.data.allDatoCmsAutor.nodes.map(autor => {
+            return(
+              <Card className="mb-5" style={{ width: '16rem' }} key={autor.originalId}>
+                <Card.Body>
+                  <Card.Title>{autor.name}</Card.Title>
+                  <Card.Subtitle className="mb-3">{autor.beruf}</Card.Subtitle>
+                  <Card.Img className="mb-3" src={autor.autorenBild.gatsbyImageData.images.fallback.src} />
+                  <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
+                  <Card.Text className="mb-3">{autor.biographieKurz}</Card.Text>
+                  <Card.Link href="#">...weiterlesen</Card.Link>
+                </Card.Body>
+              </Card>
+            )
+          })}
+        </div>
+      </main>
     </Layout>
   )
 }
@@ -38,8 +42,9 @@ export const query = graphql`
         originalId
         slug
         name
-        biographie
+        biographieKurz
         beruf
+        fotoCredit
         autorenBild {
           gatsbyImageData
         }
