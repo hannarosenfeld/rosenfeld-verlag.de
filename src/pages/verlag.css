@@ -1,0 +1,32 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .inner-body {
+        width: 100%;
+        padding: 0px;
+    }
+    .verlagpage-inner {
+        flex-direction: column;
+
+    }
+    .section {
+        width: 100%;
+    }
+    .verlag-text {
+        padding: 1em !important;
+    }
+    .container-image-theo {
+        display: flex;
+        flex-direction: column;
+        margin: auto 1em;
+    }
+    .container-image-theo p {
+
+    }
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
