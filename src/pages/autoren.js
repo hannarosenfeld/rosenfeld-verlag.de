@@ -29,7 +29,7 @@ const AutorenPage = props => {
                       <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
                     </div>
                     <div className="ipad-author-bio">
-                      <Card.Text className="mb-3">{autor.biographieKurz}</Card.Text>
+                      <Card.Text className="mb-1 ml-1">{autor.biographieKurz}</Card.Text>
                       <Card.Link className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
                     </div>
                   </div>
