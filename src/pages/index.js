@@ -14,7 +14,7 @@ const IndexPage = () => {
           </video>
         </div>
         <div className="section">
-          <div className="section-inner">
+          <div className="section-inner start-text">
             <h2 style={{lineHeight: "2.19em", padding: "0 1em"}}>Was wir über die Welt wissen, das wissen wir vor allem über Bilder und über Texte von Autorinnen und Autoren, die uns ein Fenster zu einem anderen Ort öffnen. Der Rosenfeld Verlag setzt nun nach über 20 Jahren sein Programm fort und begibt sich wieder auf Reisen zu inneren und äußeren Orten, die unser Leben bereichern werden.</h2>
           </div>
         </div>

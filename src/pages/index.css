@@ -3,6 +3,10 @@
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .inner-body {
+        width: 100%;
+        padding: 0px;
+    }
     .section {
         height: unset;
 
@@ -10,8 +14,8 @@
     .section-inner {
         flex-direction: column;
     }
-    .section-inner h2 {
-        padding: unset !important;
+    .start-text h2 {
+        margin: 2em auto;
         font-size: 1.3rem;
     }
     .video-section {
@@ -21,8 +25,8 @@
         display: flex !important;
         margin: 1em auto;
     }
-        .showcase-bookcover img {
-            width: 100%;
+    .showcase-bookcover img {
+        width: 305px;
     }
     .showcase-text {
         margin: 0 auto;
@@ -39,6 +43,9 @@
     .showcase-container-image img {
         width: 90%;
         margin: 0 auto;
+    }
+    .showcase-container-image img {
+        display: flex;
     }
 }
 
