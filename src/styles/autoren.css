@@ -1,13 +1,10 @@
-
-
 .card {
     border: none !important;
     font-size: 0.9rem;
 }
 
 .card-body {
-    width: 90%;
-    padding: 0.5rem !important;
+    padding: 0 !important;
 }
 
 .card-title {
@@ -24,9 +21,9 @@
 
 }
 
-
-
-
+.autoren-container {
+    justify-content: space-between;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
