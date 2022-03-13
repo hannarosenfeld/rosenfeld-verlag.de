@@ -6,9 +6,10 @@ import theo from '../images/rosenfeld.jpg'
 
 const VerlagPage = () => (
   <Layout>
+    <main className="section">
     <div className="d-flex">
       <div>
-        <img src={theo} />
+        <img src={theo} className="mb-2" />
         <p>Theo Rosenfeld</p>
       </div>
       <div style={{padding: "0 2em"}}>
@@ -26,6 +27,7 @@ const VerlagPage = () => (
       </div>
       </div>
     </div>
+    </main>
   </Layout>
 )
 
