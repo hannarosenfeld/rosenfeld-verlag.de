@@ -22,7 +22,7 @@ const NavBar = ({ SiteTitle }) => {
     }
   `)
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" style={{marginBottom: "1.23em"}}>
       <Container id="navbar-container">
         <Link className="logo" alt="logo" to="#"><img src={logo} width="205px"/></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

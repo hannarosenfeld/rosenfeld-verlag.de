@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.video-section {
+    height: 85vh;
+}
+
 .section-inner h2 {
     line-height: 2em;
 }
