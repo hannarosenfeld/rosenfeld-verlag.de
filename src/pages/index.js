@@ -1,13 +1,14 @@
 import React from 'react'
 import Layout from '../components/Layout.js'
 import '../components/Section.css'
+import './index.css'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 const IndexPage = () => {
   return (
     <Layout>
       <div>
-        <div className="">
+        <div className="video-banner">
           <video controls className="video-section" width="100%">
             <source src={lesung} type="video/mp4" />
           </video>
