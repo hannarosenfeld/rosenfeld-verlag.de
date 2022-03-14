@@ -12,14 +12,19 @@ export default class IndexPage extends React.Component {
     vid.currentTime = 15
     setTimeout(function () {
       vid.play()
-        }, 5000);
+      vid.addEventListener("mouseenter", function( event ) {
+        return (
+          <div>hi</div>
+        )
+      }, false);
+    }, 5000);
   }
   render() {
     return (
       <Layout>
         <div>
           <div className="video-banner">
-            <video id="homepage-video" controls muted className="video-section" width="100%">
+            <video id="homepage-video" muted className="video-section" width="100%">
               <source src={lesung} type="video/mp4" />
             </video>
           </div>
