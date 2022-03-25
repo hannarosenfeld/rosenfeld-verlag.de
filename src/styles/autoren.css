@@ -25,6 +25,19 @@
     justify-content: space-between;
 }
 
+.autoren-bio {
+  width:100%;
+  /**Major Properties**/
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 8;
+
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .card {
