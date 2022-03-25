@@ -5,16 +5,12 @@ import Layout from '../components/Layout.js'
 import '../styles/autoren.css'
 
 const AutorenPage = props => {
-  props.data.allDatoCmsAutor.nodes.map(autor => {
-    console.log(autor.autorenBild.gatsbyImageData.images.fallback.src)
-  })
-
   return(
     <Layout>
       <main className="d-flex flex-column" >
         <h2 style={{margin: "3em 0 2em 0"}}>Unsere Autorinnen und Autoren</h2>
         <div className="d-flex flex-wrap autoren-container">
-          {props.data.allDatoCmsAutor.nodes.map(autor => {
+          {props.data.allContentfulAuthor.nodes.map(autor => {
             return(
               <div className="d-flex flex-wrap" >
                 <Card className="mb-5" style={{ width: '18rem' }} key={autor.originalId}>
@@ -25,11 +21,11 @@ const AutorenPage = props => {
                   </div>
                   <div className="ipad-flex">
                     <div className="ipad-author-picture">
-                        <Card.Img className="mb-3" src={autor.autorenBild.gatsbyImageData.images.fallback.src} />
+                        <Card.Img className="mb-3" src={autor.image.url} />
                       <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
                     </div>
                     <div className="ipad-author-bio">
-                      <Card.Text className="mb-1 ml-1">{autor.biographieKurz}</Card.Text>
+                      <Card.Text className="mb-1 ml-1">{autor.bio.bio}</Card.Text>
                       <Card.Link className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
                     </div>
                   </div>
@@ -47,21 +43,23 @@ const AutorenPage = props => {
 
 export const query = graphql`
   query AutorenPageQuery{
-    allDatoCmsAutor {
-      nodes {
-        originalId
-        slug
-        name
-        biographieKurz
-        beruf
-        fotoCredit
-        autorenBild {
-          gatsbyImageData
-        }
+  allContentfulAuthor {
+    nodes {
+      beruf
+      bio {
+        bio
       }
+      id
+      name
+      image {
+        url
+      }
+      fotoCredit
     }
   }
+}
 `
+
 
 
 
