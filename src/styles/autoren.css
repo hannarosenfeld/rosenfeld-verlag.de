@@ -2,29 +2,20 @@
     border: none !important;
     font-size: 0.9rem;
 }
-
 .card-body {
     padding: 0 !important;
 }
-
 .card-title {
     font-weight: bolder;
     font-size: 1rem;
 }
-
 .card-subtitle {
     font-weight: lighter;
     font-size: 0.8rem;
 }
-
-.card-img {
-
-}
-
 .autoren-container {
     justify-content: space-between;
 }
-
 .autoren-bio {
   width:100%;
   /**Major Properties**/
@@ -35,8 +26,9 @@
   overflow: hidden !important;
   text-overflow: ellipsis;
   -webkit-line-clamp: 8;
-
 }
+
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
