@@ -34,7 +34,7 @@ const BooksPage = props => {
     return(
         <Layout>
             <h2 className="mt-5">Bücher</h2>
-            <div style={{margin: "2em auto", display: "flex", alignItems: "center"}}>
+            <div className="books-container" style={{margin: "2em auto", display: "flex"}}>
                 {props.data.allContentfulBook.nodes.map(book => {
                     return(
                         <Card className="book-container d-flex flex-column" style={{width: "23%"}} key={book.id}>
