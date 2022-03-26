@@ -37,20 +37,14 @@ const BooksPage = props => {
             <div style={{margin: "2em auto", display: "flex", alignItems: "center"}}>
                 {props.data.allContentfulBook.nodes.map(book => {
                     return(
-                        <Card className="book-container d-flex flex-column"  style={{width: "23%"}} key={book.id}>
+                        <Card className="book-container d-flex flex-column" style={{width: "23%"}} key={book.id}>
                             <Card.Body>
-                                <div>
-                                    <Card.Title className="mb-3">{book.title}</Card.Title>
+                                <Card.Title className="mb-3">{book.title}</Card.Title>
+                                 <Card.Link href={book.slug}><Card.Img src={book.coverImage.url} alt={book.title}/></Card.Link>
+                                <div className="book-description mb-2">
+                                    <Card.Text className="mt-3">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
                                 </div>
-                                <div>
-                                    <div>
-                                        <Card.Img src={book.coverImage.url} alt={book.title}/>
-                                    </div>
-                                    <div className="book-description mb-2">
-                                        <Card.Text className="mt-3">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
-                                    </div>
-                                    <Card.Link href={book.slug}>...weiterlesen</Card.Link>
-                                </div>
+                                <Card.Link href={book.slug}>...weiterlesen</Card.Link>
                             </Card.Body>
                         </Card>
                     )
