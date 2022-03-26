@@ -1,0 +1,76 @@
+import React, { useState }  from 'react'
+import Layout from '../components/Layout.js'
+import '../components/Section.css'
+import './index.css'
+import { Modal, Button} from "react-bootstrap"
+
+import lesung from '../videos/lesung.mp4'
+import ShowCase from '../components/ShowCaseBuch.js'
+
+
+
+const VideoModal = ({ handleClose, show, children }) => {
+  return (
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+  )
+}
+
+
+export default class IndexPage extends React.Component {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    componentDidMount(){
+        const vid = document.getElementById('homepage-video')
+        vid.currentTime = 15
+        setTimeout(function () {
+            vid.play()
+            vid.addEventListener("mouseenter", function( event ) {
+                return (
+                    <VideoModal/>
+                )
+            }, false);
+        }, 5000);
+    }
+    render() {
+        return (
+            <Layout>
+                <div>
+                    <div className="video-banner">
+                        <video id="homepage-video" muted className="video-section" width="100%">
+                            <source src={lesung} type="video/mp4" />
+                        </video>
+                    </div>
+                    <div className="section">
+                        <div className="section-inner start-text">
+                            <h2 style={{lineHeight: "2.19em", padding: "0 1em"}}>
+                                Was wir über die Welt wissen, das wissen wir vor allem
+                                durch Bilder und über Texte von Autorinnen und Autoren,
+                                die uns ein Fenster zu einem anderen Ort öffnen. Der
+                                Rosenfeld Verlag setzt nun nach über 20 Jahren sein
+                                Programm fort und begibt sich wieder auf Reisen zu
+                                inneren und äußeren Orten, die unser Leben bereichern
+                                werden.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <ShowCase/>
+            </Layout>
+        )
+    }
+}

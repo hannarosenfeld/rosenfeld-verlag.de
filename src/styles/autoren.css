@@ -38,6 +38,9 @@
     .card-body{
         width: 100% !important;
     }
+    .autor-detail-container {
+        flex-direction: column;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
