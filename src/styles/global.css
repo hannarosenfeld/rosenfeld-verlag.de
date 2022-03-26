@@ -2,6 +2,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -10,12 +11,24 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
 }
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+
+
+
 
 .inner-body {
     width: 95%;
@@ -30,4 +43,22 @@ a {
 
 a:hover, a:active, a:focus {
     color: rgb(102,153,153) !important;
+}
+
+
+.book-container img {
+    width: 75%;
+    box-shadow: 6px 6px 6px #c6c6c6;
+}
+
+.book-description {
+  width:80%;
+  /**Major Properties**/
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 10;
 }
