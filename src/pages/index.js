@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <div>
           <div className="video-banner">
-            <video id="homepage-video" muted className="video-section" width="100%">
+            <video id="homepage-video" className="video-section" width="100%">
               <source src={lesung} type="video/mp4" />
             </video>
           </div>
