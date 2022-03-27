@@ -28,9 +28,9 @@ export default class IndexPage extends React.Component {
               <source src={lesung} type="video/mp4" />
             </video>
           </div>
-          <div className="section">
-            <div className="section-inner start-text">
-              <h2 style={{lineHeight: "2.19em", padding: "0 1em"}}>
+          <div className="">
+            <div className="start-text">
+              <p style={{lineHeight: "2em", padding: "0 1em"}}>
                 Was wir über die Welt wissen, das wissen wir vor allem
                 durch Bilder und über Texte von Autorinnen und Autoren,
                 die uns ein Fenster zu einem anderen Ort öffnen. Der
@@ -38,7 +38,7 @@ export default class IndexPage extends React.Component {
                 Programm fort und begibt sich wieder auf Reisen zu
                 inneren und äußeren Orten, die unser Leben bereichern
                 werden.
-              </h2>
+              </p>
             </div>
           </div>
         </div>
