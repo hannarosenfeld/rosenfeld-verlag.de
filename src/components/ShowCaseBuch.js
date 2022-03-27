@@ -13,8 +13,8 @@ const ShowCase = () => (
             <img src={ausflug_cover} width="190em"/>
           </div>
           <div className="showcase-text" style={{margin: "0 2em"}}>
-            <h3>﻿Annette Hornischer (Frick)</h3>
-            <h2>﻿Ausflug auf der Vjatka</h2>
+              <p style={{fontWeight: "600"}}>﻿Annette Hornischer (Frick)</p>
+              <p style={{fontSize: "22px", fontWeight: "bold", lineHeight: "1.6"}}>﻿Ausflug auf der Vjatka</p>
             <p>»Ausflug auf der Vjatka« ist ein außergewöhnlicher und preisgekrönter Foto-Essay der Fotografin Annette Hornischer. Ihre Schwarzweißbilder schließen bewußt an die authentischen Momente der klassischen Fotografie an, aber sie verschärfen deren Ausdruck durch eine neue Intimität, die aus der künstlerischen, anti-journalistischen Haltung der Autorin erwächst.</p>
           </div>
         </div>
