@@ -11,9 +11,7 @@ export const query = graphql`
         id
         name
         beruf
-        bio {
-          bio
-        }
+
         image {
           url
          }
@@ -37,7 +35,7 @@ const Autor = props => {
                     <h1>{autor.name}</h1>
                     <p>{autor.beruf}</p>
                     <div className="mt-5" style={{width: "80%"}}>
-                        {autor.bio.bio}
+
                     </div>
                 </div>
             </div>
