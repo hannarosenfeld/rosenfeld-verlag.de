@@ -5,6 +5,17 @@ module.exports = {
     },
     plugins: [
         {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                // Footnotes mode (default: true)
+                footnotes: true,
+                // GitHub Flavored Markdown mode (default: true)
+                gfm: true,
+                // Plugins configs
+                plugins: [],
+            },
+        },
+        {
             resolve: 'gatsby-source-contentful',
             options: {
                 "accessToken": "hv25o8vhN4dZ41JTYpbqI1xhVJM3RYsgP2i4TJjBa-g",

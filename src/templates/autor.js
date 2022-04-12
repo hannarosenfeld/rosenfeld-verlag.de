@@ -11,7 +11,16 @@ export const query = graphql`
         id
         name
         beruf
-
+      childContentfulAuthorBioTextNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+        bio {
+        childrenMarkdownRemark {
+          html
+        }
+        }
         image {
           url
          }
@@ -34,9 +43,11 @@ const Autor = props => {
                 <div style={{width: "70%", margin: "0 6em"}}>
                     <h1>{autor.name}</h1>
                     <p>{autor.beruf}</p>
-                    <div className="mt-5" style={{width: "80%"}}>
-
-                    </div>
+                    <div
+                        className="mt-5"
+                        style={{width: "80%"}}
+                        dangerouslySetInnerHTML={{ __html: autor.childContentfulAuthorBioTextNode.childMarkdownRemark.html,
+                                                 }} />
                 </div>
             </div>
         </Layout>

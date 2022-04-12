@@ -5,7 +5,6 @@ import Layout from '../components/Layout.js'
 import '../styles/autoren.css'
 
 const AutorenPage = props => {
-    console.log(props)
     return(
         <Layout>
             <main className="d-flex flex-column" >
@@ -22,11 +21,11 @@ const AutorenPage = props => {
                                         </div>
                                         <div className="ipad-flex">
                                             <div className="ipad-author-picture">
-                                                <Card.Img className="autor-image mb-3" src={autor.image.url} alt={autor.name}/>
+                                                 <Card.Link className="ipad-link" href={autor.slug}><Card.Img className="autor-image mb-3" src={autor.image.url} alt={autor.name}/></Card.Link>
                                                 <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
                                             </div>
                                             <div className="ipad-author-bio">
-
+                                                <Card.Text className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
                                                 <Card.Link className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
                                             </div>
                                         </div>
@@ -48,7 +47,14 @@ export const query = graphql`
     nodes {
       slug
       beruf
-
+      bio {
+        bio
+      }
+      childContentfulAuthorBioTextNode {
+        childMarkdownRemark {
+          html
+        }
+      }
       id
       name
       image {

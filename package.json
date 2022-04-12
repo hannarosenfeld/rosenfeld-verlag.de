@@ -25,6 +25,7 @@
     "gatsby-source-contentful": "^7.8.2",
     "gatsby-source-datocms": "^3.0.16",
     "gatsby-source-filesystem": "^4.9.1",
+    "gatsby-transformer-remark": "^5.11.1",
     "gatsby-transformer-sharp": "^4.9.0",
     "jquery": "^3.6.0",
     "react": "^17.0.1",
