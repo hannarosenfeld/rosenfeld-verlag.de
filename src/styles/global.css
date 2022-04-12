@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 
+html {
+    background: #DCDAD7;
+}
 
 body {
+
     margin: 0 auto;
     display: flex;
     flex-direction: column;
