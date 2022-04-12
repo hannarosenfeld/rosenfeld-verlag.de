@@ -21,7 +21,9 @@ const AutorenPage = props => {
                                         </div>
                                         <div className="ipad-flex">
                                             <div className="ipad-author-picture">
-                                                 <Card.Link className="ipad-link" href={autor.slug}><Card.Img className="autor-image mb-3" src={autor.image.url} alt={autor.name}/></Card.Link>
+                                                <Card.Link className="ipad-link" href={autor.slug}>
+                                                    <Card.Img className="autor-image mb-3" src={autor.image.url} style={{width: "15em", height: "17em", objectFit: "cover"}}alt={autor.name}/>
+                                                </Card.Link>
                                                 <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
                                             </div>
                                             <div className="ipad-author-bio">
