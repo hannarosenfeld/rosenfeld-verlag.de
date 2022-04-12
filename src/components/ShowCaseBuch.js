@@ -2,7 +2,7 @@ import React from 'react'
 import ausflug from '../images/ausflug.png'
 import ausflug_cover from '../images/Vjatka.jpg'
 
-import './ShowCaseBuch.css'
+import '../styles/ShowCaseBuch.css'
 
 const ShowCase = () => (
   <div className="section">

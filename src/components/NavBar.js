@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Link from './Link'
 import logo from '../images/rosenfeldverlag.svg'
-import './NavBar.css'
+import '../styles/NavBar.css'
 
 const NavBar = ({ SiteTitle }) => {
   const result = useStaticQuery(graphql`

@@ -1,7 +1,7 @@
 import React, { useState }  from 'react'
 import Layout from '../components/Layout.js'
-import '../components/Section.css'
-import './index.css'
+import '../styles/Section.css'
+import '../styles/index.css'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 

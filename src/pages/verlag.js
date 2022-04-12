@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout.js'
 
-import './verlag.css'
+import '../styles/verlag.css'
 import theo from '../images/rosenfeld.jpg'
 
 
