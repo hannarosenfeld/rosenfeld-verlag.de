@@ -22,7 +22,11 @@ export const query = graphql`
         }
         }
         image {
-          url
+        resize(width: 300) {
+          width
+          height
+          src
+        }
          }
         fotoCredit
       }
@@ -37,7 +41,7 @@ const Autor = props => {
         <Layout>
             <div className="autor-detail-container d-flex mt-5 mb-5">
                 <div className="autor-detail-image-container">
-                    <img src={autor.image.url}/>
+                    <img src={autor.image.resize.src}/>
                     <p>Foto: {autor.fotoCredit}</p>
                 </div>
                 <div style={{width: "70%", margin: "0 6em"}}>
