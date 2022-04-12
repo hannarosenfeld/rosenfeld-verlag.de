@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="inner-body">
       <NavBar/>
-      <main >
+        <main style={{height: "40vw"}}>
         {children}
       </main>
       <footer>
