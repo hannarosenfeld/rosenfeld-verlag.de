@@ -60,7 +60,8 @@ function IndexPage() {
                 right: "0",
                 left: "0",
                 zIndex: "1030"
-            }}/>
+            }}
+            />
             <VideoBanner/>
           </div>
           <div className="">
