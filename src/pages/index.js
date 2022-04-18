@@ -12,45 +12,47 @@ function VideoBanner(){
     const [isShown, setIsShown] = useState(false);
 
     return(
-        <div style={{height: "50vw"}}>
-        <div
-          className="video-banner"
-          style={{
-              display: "flex",
-              width: "100%",
-              position: "relative",
-          }}
-          onMouseEnter={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
-        >
-          <video muted controls id="homepage-video" className="video-section" width="100%">
-            <source src={lesung} type="video/mp4" />
-
-          </video>
-          {isShown && (
-              <div style={{
-            fontSize: "1.8em",
-            margin: "0 auto",
-            padding: "2.2em",
-            zIndex: "1",
-            position: "absolute",
-            color: "red",
-            border: "2px solid salmon",
-                  margin: "8em 12em",
-                  background: "pink"
-        }}>
-              Ton einschalten mit Klick
-        </div>
-          )}
-        </div>
-        </div>
+          <div
+            className="video-banner"
+            style={{
+                width: "100%",
+                position: "relative",
+                zIndex: "0",
+                display: "flex",
+            }}
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
+            {isShown && (
+                <div style={{
+                    fontSize: "1.8em",
+                    margin: "0",
+                    top: "50%",
+                    left: "50%",
+                    marginRight: "-50%",
+                    transform: "translate(-50%, -50%)",
+                    padding: "2.2em",
+                    zIndex: "10",
+                    position: "absolute",
+                    display: "block",
+                    color: "red",
+                    border: "2px solid salmon",
+                    background: "pink",
+                }}>
+                  Ton einschalten mit Klick
+                </div>
+            )}
+        <video muted controls id="homepage-video" className="video-section" style={{width: "100%"}}>
+              <source src={lesung} type="video/mp4" />
+            </video>
+          </div>
     )
 }
 
 function IndexPage() {
 
     return (
-        <Layout>
+        <>
           <VideoBanner/>
           <div className="">
             <div className="start-text">
@@ -66,7 +68,7 @@ function IndexPage() {
             </div>
           </div>
           <ShowCase/>
-        </Layout>
+        </>
     )
 }
 

@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 
-html {
-    background: #DCDAD7;
-}
-
 body {
+    background: #DCDAD7;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -43,9 +40,7 @@ p {
 }
 
 .inner-body {
-    width: 95%;
     margin: 0 auto;
-    padding: 1em;
 }
 
 a {
