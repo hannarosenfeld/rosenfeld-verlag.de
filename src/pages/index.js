@@ -1,33 +1,57 @@
 import React, { useState }  from 'react'
+import {Modal} from 'react-bootstrap'
+
 import Layout from '../components/Layout.js'
-import '../styles/Section.css'
-import '../styles/index.css'
+
+
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 
 
-export default class IndexPage extends React.Component {
-  componentDidMount(){
-    const vid = document.getElementById('homepage-video')
-    vid.currentTime = 15
-    setTimeout(function () {
-      vid.play()
-      vid.addEventListener("mouseenter", function( event ) {
-        return (
-          <div>hi</div>
-        )
-      }, false);
-    }, 5000);
-  }
-  render() {
+function VideoBanner(){
+    const [isShown, setIsShown] = useState(false);
+
+    return(
+        <div style={{height: "50vw"}}>
+        <div
+          className="video-banner"
+          style={{
+              display: "flex",
+              width: "100%",
+              position: "relative",
+          }}
+          onMouseEnter={() => setIsShown(true)}
+          onMouseLeave={() => setIsShown(false)}
+        >
+          <video muted controls id="homepage-video" className="video-section" width="100%">
+            <source src={lesung} type="video/mp4" />
+
+          </video>
+          {isShown && (
+              <div style={{
+            fontSize: "1.8em",
+            margin: "0 auto",
+            padding: "2.2em",
+            zIndex: "1",
+            position: "absolute",
+            color: "red",
+            border: "2px solid salmon",
+                  margin: "8em 12em",
+                  background: "pink"
+        }}>
+              Ton einschalten mit Klick
+        </div>
+          )}
+        </div>
+        </div>
+    )
+}
+
+function IndexPage() {
+
     return (
-      <Layout>
-        <div>
-          <div className="video-banner">
-            <video autoplay controls id="homepage-video" className="video-section" width="100%">
-              <source src={lesung} type="video/mp4" />
-            </video>
-          </div>
+        <Layout>
+          <VideoBanner/>
           <div className="">
             <div className="start-text">
               <p style={{lineHeight: "2em", padding: "0 1em"}}>
@@ -41,9 +65,10 @@ export default class IndexPage extends React.Component {
               </p>
             </div>
           </div>
-        </div>
-        <ShowCase/>
-      </Layout>
+          <ShowCase/>
+        </Layout>
     )
-  }
 }
+
+
+export default IndexPage
