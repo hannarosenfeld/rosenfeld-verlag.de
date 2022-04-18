@@ -23,6 +23,8 @@ const NavBar = ({ SiteTitle }) => {
   `)
     return (
         <Navbar expand="lg" style={{
+            width: "95%",
+            margin: "0 auto",
             position: "fixed",
             right: "0",
             left: "0",

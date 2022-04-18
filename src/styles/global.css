@@ -40,7 +40,9 @@ p {
 }
 
 .inner-body {
+    width: 95%;
     margin: 0 auto;
+    padding: 1em;
 }
 
 a {
