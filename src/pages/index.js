@@ -12,6 +12,16 @@ import ShowCase from '../components/ShowCaseBuch.js'
 function VideoBanner(){
     const [isShown, setIsShown] = useState(false);
 
+    function handleClick(e) {
+        var video = document.querySelector("video")
+        if(isShown === true) {
+//          video.setAttribute("muted", "false")
+            video.muted = !video.muted;
+            console.log("hiiiii")
+        } else {
+            console.log("hi")
+            }
+    }
     return(
           <div
             className="video-banner"
@@ -39,7 +49,9 @@ function VideoBanner(){
                     color: "#f9f9f9",
                     background: "rgba(33,33,33, 0.8)",
                     borderRadius: "0.23em"
-                }}>
+                }}
+                     onClick={handleClick}
+                >
                   Ton einschalten mit Klick
                 </div>
             )}
@@ -56,7 +68,7 @@ function IndexPage() {
         <>
           <div className="index-header">
             <NavBar style={{
-                width: "95%"
+
             }}
             />
             <VideoBanner/>
