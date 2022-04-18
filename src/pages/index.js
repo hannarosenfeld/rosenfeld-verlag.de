@@ -1,7 +1,8 @@
 import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
-import Layout from '../components/Layout.js'
+import NavBar from "../components/NavBar"
+import Layout from '../components/Layout'
 
 
 import lesung from '../videos/lesung.mp4'
@@ -31,18 +32,18 @@ function VideoBanner(){
                     left: "50%",
                     marginRight: "-50%",
                     transform: "translate(-50%, -50%)",
-                    padding: "2.2em",
+                    padding: "1.8em",
                     zIndex: "10",
                     position: "absolute",
                     display: "block",
-                    color: "red",
-                    border: "2px solid salmon",
-                    background: "pink",
+                    color: "#f9f9f9",
+                    background: "rgba(33,33,33, 0.8)",
+                    borderRadius: "0.23em"
                 }}>
                   Ton einschalten mit Klick
                 </div>
             )}
-        <video muted controls id="homepage-video" className="video-section" style={{width: "100%"}}>
+        <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
               <source src={lesung} type="video/mp4" />
             </video>
           </div>
@@ -53,7 +54,15 @@ function IndexPage() {
 
     return (
         <>
-          <VideoBanner/>
+          <div className="index-header">
+            <NavBar style={{
+                position: "fixed",
+                right: "0",
+                left: "0",
+                zIndex: "1030"
+            }}/>
+            <VideoBanner/>
+          </div>
           <div className="">
             <div className="start-text">
               <p style={{lineHeight: "2em", padding: "0 1em"}}>
