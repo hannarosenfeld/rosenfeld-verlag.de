@@ -18,7 +18,7 @@ const ShowCase = () => (
             <p>»Ausflug auf der Vjatka« ist ein außergewöhnlicher und preisgekrönter Foto-Essay der Fotografin Annette Hornischer. Ihre Schwarzweißbilder schließen bewußt an die authentischen Momente der klassischen Fotografie an, aber sie verschärfen deren Ausdruck durch eine neue Intimität, die aus der künstlerischen, anti-journalistischen Haltung der Autorin erwächst.</p>
           </div>
         </div>
-        <div style={{padding: "0 3em"}} >
+        <div className="quote" style={{padding: "0 3em"}} >
           <blockquote style={{fontWeight: "bolder"}}>
             „Die Fotos sind ganz ohne Glamour und das macht die Bilder und die Menschen darauf verstörend, betörend zeitlos"
           </blockquote>

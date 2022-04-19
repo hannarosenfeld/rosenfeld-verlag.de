@@ -6,6 +6,7 @@ import NavBar from "../components/NavBarSticky"
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 
+import '../styles/index.css'
 
 function VideoBanner(){
     const [isShown, setIsShown] = useState(false);
@@ -73,7 +74,7 @@ function IndexPage() {
           </div>
           <div className="">
             <div className="start-text">
-              <p style={{lineHeight: "2em", padding: "0 1em"}}>
+              <p style={{lineHeight: "2em", padding: "0 1em", fontSize: "1em"}}>
                 Was wir über die Welt wissen, das wissen wir vor allem
                 durch Bilder und über Texte von Autorinnen und Autoren,
                 die uns ein Fenster zu einem anderen Ort öffnen. Der

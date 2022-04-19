@@ -28,20 +28,30 @@
         margin: 2em auto;
         font-size: 1.3rem;
     }
+    .start-text {
+        padding: 2em 0;
+    }
     .video-section {
         height: unset;
     }
     .showcase-bookcover {
         display: flex !important;
-        margin: 1em auto;
+        margin: 1em 0;
     }
     .showcase-bookcover img {
         width: 305px;
     }
     .showcase-text {
-        margin: 0 auto;
+        margin: 0 auto !important;
         display: flex;
         flex-direction: column;
+    }
+    .showcase-text p {
+        width: 80%;
+    }
+    .quote {
+        padding: 0 !important;
+        width: 80%;
     }
     .showcase-container-text {
         width: 100%;
