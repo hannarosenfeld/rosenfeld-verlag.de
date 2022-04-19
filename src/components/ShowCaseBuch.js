@@ -7,7 +7,7 @@ import '../styles/ShowCaseBuch.css'
 const ShowCase = () => (
   <div className="section">
     <div className="section-inner showcase-container d-flex" style={{background: "#CDC5C2"}}>
-      <div width="70%" className="showcase-container-text">
+      <div width="70%" className="showcase-container-text" style={{margin: "1.2em 2em"}}>
         <div className="d-flex p-5 showcase-container-text-inner">
           <div className="showcase-bookcover">
             <img src={ausflug_cover} width="190em"/>
