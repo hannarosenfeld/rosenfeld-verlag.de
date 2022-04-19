@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="inner-body">
       <NavBar/>
-        <main>
+      <main style={{margin: "1.5em 2em"}}>
         {children}
       </main>
       <footer>
