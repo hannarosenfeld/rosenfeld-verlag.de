@@ -16,8 +16,8 @@ const AutorenPage = props => {
                                 <Card className="mb-5" style={{ width: '18rem' }} key={autor.originalId}>
                                     <Card.Body>
                                         <div className="ipad-title">
-                                            <Card.Title>{autor.name}</Card.Title>
-                                            <Card.Subtitle className="mb-3">{autor.beruf}</Card.Subtitle>
+                                            <Card.Title style={{fontSize: "1rem"}}>{autor.name}</Card.Title>
+                                            <Card.Subtitle className="mb-3" style={{fontSize: "0.8rem"}}>{autor.beruf}</Card.Subtitle>
                                         </div>
                                         <div className="ipad-flex">
                                             <div className="ipad-author-picture">
@@ -32,7 +32,7 @@ const AutorenPage = props => {
                                             </div>
                                             <div className="ipad-author-bio">
                                                 <Card.Text className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                                <Card.Link className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
+                                                <Card.Link  style={{fontSize: "0.8rem"}} className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
                                             </div>
                                         </div>
                                     </Card.Body>

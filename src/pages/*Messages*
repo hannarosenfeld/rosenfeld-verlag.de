@@ -1,0 +1,14 @@
+End of buffer
+missing ; after statement
+Quit
+mismatched closing JSX tag; expected ‘h5’
+invalid JSX identifier
+syntax error
+Mark set
+Auto-saving...done
+Mark set
+Saving file /Users/hzr/Code/rosenfeld-verlag.de/src/pages/autoren.js...
+Wrote /Users/hzr/Code/rosenfeld-verlag.de/src/pages/autoren.js
+Saving file /Users/hzr/Code/rosenfeld-verlag.de/src/pages/autoren.js...
+Wrote /Users/hzr/Code/rosenfeld-verlag.de/src/pages/autoren.js
+completing-read-default: Command attempted to use minibuffer while in minibuffer
