@@ -1,9 +1,7 @@
 import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
-import NavBar from "../components/NavBar"
-import Layout from '../components/Layout'
-
+import NavBar from "../components/NavBarSticky"
 
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
@@ -70,11 +68,8 @@ function IndexPage() {
 
     return (
         <>
-          <div className="index-header">
-            <NavBar style={{
-
-            }}
-            />
+          <div>
+            <NavBar/>
             <VideoBanner/>
           </div>
           <div className="">
