@@ -17,7 +17,6 @@ function VideoBanner(){
 //          video.setAttribute("muted", "false")
             video.muted = !video.muted;
             document.getElementById("video-modal").style.display = "none"
-
         } else {
             console.log("hi")
             }
@@ -34,7 +33,7 @@ function VideoBanner(){
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
           >
-            {isShown && (
+            {isShown && document.querySelector("video").muted === true && (
                 <div
                   id="video-modal"
                   style={{
