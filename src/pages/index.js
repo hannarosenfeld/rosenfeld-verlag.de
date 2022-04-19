@@ -14,10 +14,12 @@ function VideoBanner(){
 
     function handleClick(e) {
         var video = document.querySelector("video")
+
         if(isShown === true) {
 //          video.setAttribute("muted", "false")
             video.muted = !video.muted;
-            console.log("hiiiii")
+            document.getElementById("video-modal").style.display = "none"
+
         } else {
             console.log("hi")
             }
@@ -35,7 +37,9 @@ function VideoBanner(){
             onMouseLeave={() => setIsShown(false)}
           >
             {isShown && (
-                <div style={{
+                <div
+                  id="video-modal"
+                  style={{
                     fontSize: "1.8em",
                     margin: "0",
                     top: "50%",
