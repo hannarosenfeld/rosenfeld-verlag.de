@@ -1,8 +1,7 @@
 import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
-import NavBar from "../components/NavBarSticky"
-
+import Layout from '../components/Layout'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 
@@ -15,29 +14,29 @@ function VideoBanner(){
         var video = document.querySelector("video")
 
         if(isShown === true) {
-//          video.setAttribute("muted", "false")
+            //          video.setAttribute("muted", "false")
             video.muted = !video.muted;
             document.getElementById("video-modal").style.display = "none"
         } else {
             console.log("hi")
-            }
+        }
     }
     return(
-          <div
-            className="video-banner"
-            style={{
-                width: "100%",
-                position: "relative",
-                zIndex: "0",
-                display: "flex",
-            }}
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-          >
-            {isShown && document.querySelector("video").muted === true && (
-                <div
-                  id="video-modal"
-                  style={{
+        <div
+          className="video-banner"
+          style={{
+              width: "100%",
+              position: "relative",
+              zIndex: "0",
+              display: "flex",
+          }}
+          onMouseEnter={() => setIsShown(true)}
+          onMouseLeave={() => setIsShown(false)}
+        >
+          {isShown && document.querySelector("video").muted === true && (
+              <div
+                id="video-modal"
+                style={{
                     fontSize: "1.8em",
                     margin: "0",
                     top: "50%",
@@ -52,26 +51,23 @@ function VideoBanner(){
                     background: "rgba(33,33,33, 0.8)",
                     borderRadius: "0.23em"
                 }}
-                     onClick={handleClick}
-                >
-                  Ton einschalten mit Klick
-                </div>
-            )}
-        <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
-              <source src={lesung} type="video/mp4" />
-            </video>
-          </div>
+                onClick={handleClick}
+              >
+                Ton einschalten mit Klick
+              </div>
+          )}
+          <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
+            <source src={lesung} type="video/mp4" />
+          </video>
+        </div>
     )
 }
 
 function IndexPage() {
 
     return (
-        <>
-          <div>
-            <NavBar/>
-            <VideoBanner/>
-          </div>
+        <Layout>
+          <VideoBanner/>
           <div className="">
             <div className="start-text">
               <p style={{lineHeight: "2em", padding: "0 1em", fontSize: "1em"}}>
@@ -86,7 +82,7 @@ function IndexPage() {
             </div>
           </div>
           <ShowCase/>
-        </>
+        </Layout>
     )
 }
 

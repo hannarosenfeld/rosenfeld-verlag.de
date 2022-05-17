@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <footer>
+        HALLO
         © {new Date().getFullYear()}, Built by
         {` `}
         <a href="https://www.hannarosenfeld.com">Hanna Rosenfeld</a>
