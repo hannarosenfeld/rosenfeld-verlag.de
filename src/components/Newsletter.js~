@@ -1,0 +1,23 @@
+
+
+const Newsletter = () => (
+ <div style="display: flex; margin: 3em">
+                    <div style="width: 70%">
+                        <h1>Newsletter</h1>
+                        <p>Unser Newsletter informiert Sie über unsere Autoren, Veranstaltungen und Neuerscheinungen aus dem Rosenfeld Verlag. Einfach hier registrieren!
+                        </p>
+                    </div>
+                    <!-- Begin Mailchimp Signup Form -->
+                    <div id="mc_embed_signup" style="margin: 3em">
+                        <form action="https://rosenfeld-verlag.us5.list-manage.com/subscribe/post?u=d1dda24b5a06af16d6e38cf5f&amp;id=62f45d29bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll" style="padding: 1em">
+                                <label for="mce-EMAIL">Email:</label>
+                                <input  style="min-width: 323px" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d1dda24b5a06af16d6e38cf5f_62f45d29bc" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+)

@@ -2,6 +2,7 @@ import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
 import Layout from '../components/Layout'
+import Newsletter from '../components/Newsletter'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 
@@ -82,6 +83,7 @@ function IndexPage() {
             </div>
           </div>
           <ShowCase/>
+          <Newsletter/>
         </Layout>
     )
 }
