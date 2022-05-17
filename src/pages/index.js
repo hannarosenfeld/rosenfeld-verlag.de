@@ -71,7 +71,7 @@ function IndexPage() {
           <VideoBanner/>
           <div className="">
             <div className="start-text">
-              <p style={{lineHeight: "2em", padding: "0 1em", fontSize: "1em"}}>
+              <p style={{lineHeight: "2em", fontSize: "1.5em"}}>
                 Was wir über die Welt wissen, das wissen wir vor allem
                 durch Bilder und über Texte von Autorinnen und Autoren,
                 die uns ein Fenster zu einem anderen Ort öffnen. Der
