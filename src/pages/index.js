@@ -5,8 +5,11 @@ import Layout from '../components/Layout'
 import Newsletter from '../components/Newsletter'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
+import Termin from '../components/Termin'
 
 import '../styles/index.css'
+
+
 
 function VideoBanner(){
     const [isShown, setIsShown] = useState(false);
@@ -83,6 +86,7 @@ function IndexPage() {
             </div>
           </div>
           <ShowCase/>
+          <Termin/>
           <Newsletter/>
         </Layout>
     )

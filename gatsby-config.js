@@ -34,6 +34,7 @@ module.exports = {
                 "trackingId": "G-MRJP8QS9GZ"
             }
         },
+        `gatsby-plugin-mdx`,
         "gatsby-plugin-image",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sharp",

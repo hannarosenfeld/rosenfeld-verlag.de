@@ -45,7 +45,7 @@ const BooksPage = props => {
                               <div className="book-description mb-2" >
                                     <Card.Text className="mt-3">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
                                 </div>
-                                <Card.Link  style={{fontSize: "0.8rem"}} href={book.slug}>...weiterlesen</Card.Link>
+                        <Card.Link  style={{fontSize: "0.8rem"}} href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
                             </Card.Body>
                         </Card>
                     )

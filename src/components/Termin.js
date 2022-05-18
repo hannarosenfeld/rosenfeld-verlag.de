@@ -14,7 +14,7 @@ export default function Termin() {
           link
           autor
           image {
-            gatsbyImageData(width: 200)
+            gatsbyImageData(width: 150)
           }
         }
       }
@@ -26,7 +26,7 @@ export default function Termin() {
               const image = getImage(termin.image)
               return(
                   <div style={{width: "100%", background: "#D3D8C3"}}>
-                    <div className="d-flex justify-content-between m-3">
+                    <div className="d-flex justify-content-between m-3 p-3">
                       <div className="d-flex" style={{gap: "1em"}}>
                         <GatsbyImage image={image}/>
                         <h3>{termin.autor}</h3>
