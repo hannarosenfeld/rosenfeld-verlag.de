@@ -1,77 +1,78 @@
 import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
-import Layout from '../components/Layout'
+import NavBarSticky from '../components/NavBarSticky.js'
 import Newsletter from '../components/Newsletter'
 import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 import Termin from '../components/Termin'
+import Narben from '../components/ShowCase/Narben'
 
 import '../styles/index.css'
 
 
 
-function VideoBanner(){
-    const [isShown, setIsShown] = useState(false);
+// function VideoBanner(){
+//     const [isShown, setIsShown] = useState(false);
+//     function handleClick(e) {
+//         var video = document.querySelector("video")
 
-    function handleClick(e) {
-        var video = document.querySelector("video")
-
-        if(isShown === true) {
-            //          video.setAttribute("muted", "false")
-            video.muted = !video.muted;
-            document.getElementById("video-modal").style.display = "none"
-        } else {
-            console.log("hi")
-        }
-    }
-    return(
-        <div
-          className="video-banner"
-          style={{
-              width: "100%",
-              position: "relative",
-              zIndex: "0",
-              display: "flex",
-          }}
-          onMouseEnter={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
-        >
-          {isShown && document.querySelector("video").muted === true && (
-              <div
-                id="video-modal"
-                style={{
-                    fontSize: "1.8em",
-                    margin: "0",
-                    top: "50%",
-                    left: "50%",
-                    marginRight: "-50%",
-                    transform: "translate(-50%, -50%)",
-                    padding: "1.8em",
-                    zIndex: "10",
-                    position: "absolute",
-                    display: "block",
-                    color: "#f9f9f9",
-                    background: "rgba(33,33,33, 0.8)",
-                    borderRadius: "0.23em"
-                }}
-                onClick={handleClick}
-              >
-                Ton einschalten mit Klick
-              </div>
-          )}
-          <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
-            <source src={lesung} type="video/mp4" />
-          </video>
-        </div>
-    )
-}
+//         if(isShown === true) {
+//             //          video.setAttribute("muted", "false")
+//             video.muted = !video.muted;
+//             document.getElementById("video-modal").style.display = "none"
+//         } else {
+//             console.log("hi")
+//         }
+//     }
+//     return(
+//         <div
+//           className="video-banner"
+//           style={{
+//               width: "100%",
+//               position: "relative",
+//               zIndex: "0",
+//               display: "flex",
+//           }}
+//           onMouseEnter={() => setIsShown(true)}
+//           onMouseLeave={() => setIsShown(false)}
+//         >
+//           {isShown && document.querySelector("video").muted === true && (
+//               <div
+//                 id="video-modal"
+//                 style={{
+//                     fontSize: "1.8em",
+//                     margin: "0",
+//                     top: "50%",
+//                     left: "50%",
+//                     marginRight: "-50%",
+//                     transform: "translate(-50%, -50%)",
+//                     padding: "1.8em",
+//                     zIndex: "10",
+//                     position: "absolute",
+//                     display: "block",
+//                     color: "#f9f9f9",
+//                     background: "rgba(33,33,33, 0.8)",
+//                     borderRadius: "0.23em"
+//                 }}
+//                 onClick={handleClick}
+//               >
+//                 Ton einschalten mit Klick
+//               </div>
+//           )}
+//           <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
+//             <source src={lesung} type="video/mp4" />
+//           </video>
+//         </div>
+//     )
+// }
 
 function IndexPage() {
 
     return (
-        <Layout>
-          <VideoBanner/>
+        <div>
+        <NavBarSticky/>
+          <Narben/>
           <div className="">
             <div className="start-text">
               <p style={{lineHeight: "2em", fontSize: "1.5em"}}>
@@ -87,8 +88,8 @@ function IndexPage() {
           </div>
           <ShowCase/>
           <Termin/>
-          <Newsletter/>
-        </Layout>
+        <Newsletter/>
+        </div>
     )
 }
 
