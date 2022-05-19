@@ -40,12 +40,12 @@ const BooksPage = props => {
                   return(
                       <Card className="book-container d-flex flex-column" style={{width: "23%", marginRight:"3em"}} key={book.id}>
                         <Card.Body>
-                          <Card.Title className="mb-3" style={{fontSize: "1rem"}}>{book.title}</Card.Title>
+                          <Card.Title className="mb-3" style={{ fontWeight: "bold", fontSize: "1rem"}}>{book.title}</Card.Title>
                           <Card.Link href={book.slug}><Card.Img style={{width: "220px"}} src={book.coverImage.url} alt={book.title}/></Card.Link>
                           <div className="book-description mb-2" >
                             <Card.Text style={{fontSize: "0.9em"}} className="mt-3">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
                           </div>
-                          <Card.Link  style={{fontSize: "0.8rem"}} href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
+                      <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
                         </Card.Body>
                       </Card>
                   )
