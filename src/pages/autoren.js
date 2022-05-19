@@ -56,11 +56,6 @@ export const query = graphql`
       bio {
         bio
       }
-      childContentfulAuthorBioTextNode {
-        childMarkdownRemark {
-          html
-        }
-      }
       id
       name
       image {
