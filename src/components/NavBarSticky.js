@@ -22,9 +22,11 @@ const NavBarSticky = ({ SiteTitle }) => {
     }
   `)
     return (
+
         <Navbar expand="lg" style={{
             width: "95%",
             margin: "0 auto",
+            padding: "2em",
             position: "absolute",
             right: "0",
             left: "0",
@@ -36,7 +38,7 @@ const NavBarSticky = ({ SiteTitle }) => {
             <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse-reset">
               <Nav className="m-auto special-nav">
                 {result.datoCmsMenu.menuItems.map(menuItem => (
-                    <Link style={{color: "#EEEEEE"}}key={menuItem.originalId} to={menuItem.destination.slug}>
+                    <Link style={{color: "#EEEEEE"}} key={menuItem.originalId} to={menuItem.destination.slug}>
                       {menuItem.labelText === "Home" ? "" : menuItem.labelText}
                     </Link>
                 ))}
