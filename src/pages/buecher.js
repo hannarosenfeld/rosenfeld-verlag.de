@@ -33,12 +33,12 @@ export const query = graphql`
 const BooksPage = props => {
     return(
         <Layout>
-          <div style={{margin: "7em auto"}}>
-            <h2 className="mt-5">Bücher</h2>
-            <div className="books-container" style={{margin: "3em auto", display: "flex"}}>
+          <div>
+            <h2 className="mb-5">Bücher</h2>
+            <div className="books-container" style={{display: "flex", gap: "4em"}}>
               {props.data.allContentfulBook.nodes.map(book => {
                   return(
-                      <Card className="book-container d-flex flex-column" style={{width: "23%", marginRight:"3em"}} key={book.id}>
+                      <Card className="book-container d-flex flex-column" style={{width: "23%"}} key={book.id}>
                         <Card.Body>
                           <Card.Title className="mb-3" style={{ fontWeight: "bold", fontSize: "1rem"}}>{book.title}</Card.Title>
                           <Card.Link href={book.slug}><Card.Img style={{width: "220px"}} src={book.coverImage.url} alt={book.title}/></Card.Link>
