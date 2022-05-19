@@ -7,6 +7,7 @@ import lesung from '../videos/lesung.mp4'
 import ShowCase from '../components/ShowCaseBuch.js'
 import Termin from '../components/Termin'
 import Narben from '../components/ShowCase/Narben'
+import Footer from '../components/Footer'
 
 import '../styles/index.css'
 
@@ -73,6 +74,7 @@ function IndexPage() {
         <div>
         <NavBarSticky/>
           <Narben/>
+          <div style={{width: "95%", margin: "0 auto", padding: "1em"}}>
           <div className="">
             <div className="start-text">
               <p style={{lineHeight: "2em", fontSize: "1.5em"}}>
@@ -88,7 +90,9 @@ function IndexPage() {
           </div>
           <ShowCase/>
           <Termin/>
-        <Newsletter/>
+            <Newsletter/>
+            <Footer/>
+        </div>
         </div>
     )
 }

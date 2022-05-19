@@ -17,7 +17,7 @@ class Newsletter extends React.Component {
     }
     render(){
         return(
-            <div className="mt-5" style={{display: "flex"}}>
+            <div className="mt-5" style={{display: "flex", padding: "2em"}}>
               <div style={{width: "70%"}}>
                 <h1>Newsletter</h1>
                 <p>Unser Newsletter informiert Sie über unsere Autoren, Veranstaltungen und Neuerscheinungen aus dem Rosenfeld Verlag. Einfach hier registrieren!</p>
