@@ -25,7 +25,7 @@ const NavBarSticky = ({ SiteTitle }) => {
         <Navbar expand="lg" style={{
             width: "95%",
             margin: "0 auto",
-            position: "fixed",
+            position: "absolute",
             right: "0",
             left: "0",
             zIndex: "1030"
