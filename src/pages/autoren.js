@@ -28,11 +28,11 @@ const AutorenPage = props => {
                                                     style={{width: "15em", height: "17em", objectFit: "cover"}}
                                                     alt={autor.name}/>
                                                 </Card.Link>
-                                                <Card.Subtitle className="mb-3">{autor.fotoCredit}</Card.Subtitle>
+                                              <Card.Subtitle style={{fontSize: "0.8em"}}className="mb-3">{autor.fotoCredit}</Card.Subtitle>
                                             </div>
                                             <div className="ipad-author-bio">
                                                 <Card.Text className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                                <Card.Link  style={{fontSize: "0.8rem"}} className="ipad-link" href={autor.slug}>...weiterlesen</Card.Link>
+                                              <Card.Link  style={{fontSize: "0.8rem"}} className="ipad-link" href={`autoren/${autor.slug}`}>...weiterlesen</Card.Link>
                                             </div>
                                         </div>
                                     </Card.Body>
