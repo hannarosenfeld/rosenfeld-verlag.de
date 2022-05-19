@@ -16,7 +16,7 @@ const AutorenPage = props => {
                                 <Card className="mb-5" style={{ width: '18rem' }} key={autor.originalId}>
                                     <Card.Body>
                                         <div className="ipad-title">
-                                            <Card.Title style={{fontSize: "1rem"}}>{autor.name}</Card.Title>
+                                          <Card.Title style={{fontSize: "1rem", fontWeight: "bold"}}>{autor.name}</Card.Title>
                                             <Card.Subtitle className="mb-3" style={{fontSize: "0.8rem"}}>{autor.beruf}</Card.Subtitle>
                                         </div>
                                         <div className="ipad-flex">
@@ -28,11 +28,11 @@ const AutorenPage = props => {
                                                     style={{width: "15em", height: "17em", objectFit: "cover"}}
                                                     alt={autor.name}/>
                                                 </Card.Link>
-                                              <Card.Subtitle style={{fontSize: "0.8em"}}className="mb-3">{autor.fotoCredit}</Card.Subtitle>
+                                              <Card.Subtitle style={{fontSize: "0.7em"}}className="mb-3">Foto: {autor.fotoCredit}</Card.Subtitle>
                                             </div>
                                             <div className="ipad-author-bio">
-                                                <Card.Text className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                              <Card.Link  style={{fontSize: "0.8rem"}} className="ipad-link" href={`autoren/${autor.slug}`}>...weiterlesen</Card.Link>
+                                                <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
+                            <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" href={`autoren/${autor.slug}`}>...weiterlesen</Card.Link>
                                             </div>
                                         </div>
                                     </Card.Body>
