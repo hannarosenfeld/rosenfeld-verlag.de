@@ -9,7 +9,7 @@ const AutorenPage = props => {
         <Layout>
           <main className="d-flex flex-column" >
             <h2 className="mb-5">Unsere Autorinnen und Autoren</h2>
-            <div className="d-flex flex-wrap autoren-container" style={{gap: "1.5em"}}>
+            <div className="d-flex flex-wrap flex-row-reverse autoren-container" style={{gap: "1.5em"}}>
               {props.data.allContentfulAuthor.nodes.map(autor => {
                   return(
                       <div className="d-flex flex-wrap" >
