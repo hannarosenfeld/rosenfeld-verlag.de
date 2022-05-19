@@ -34,6 +34,7 @@ const Narben = () => {
         <div style={{background: `url("${book.backgroundImage.url}")`, height: "52vw"}}>
           <div className="d-flex" style={{padding: "10em 8em", color: "#EEEEEE"}}>
             <div style={{width: "30%"}}>
+              <section style={{background: "#FA2230", width: "12em", padding: "0.3em 0.5em", textAlign: "center", margin: "0.8em -2em", fontWeight: "bold"}}>NEUERSCHEINUNG</section>
               <GatsbyImage style={{border: "0.2em solid #EEEEEE"}} image={coverImage}/>
             </div>
             <div style={{width: "70%"}}>
