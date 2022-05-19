@@ -7,10 +7,10 @@ import theo from '../images/rosenfeld.jpg'
 
 const VerlagPage = () => (
   <Layout>
-    <main className="section">
+    <main className="section" style={{marginTop: "7em"}}>
       <div className="verlagpage-inner d-flex">
         <div className="container-image-theo">
-          <img src={theo} className="mb-2 " />
+          <img src={theo} className="mb-2" style={{width: "14em"}}/>
           <p>Theo Rosenfeld</p>
         </div>
         <div  className="verlag-text" style={{padding: "0 2em"}}>
