@@ -12,9 +12,26 @@ export default function BookTemplate({ data }) {
     return (
         <Layout>
           {authoren.map(author => {
+              const image = getImage(author.image)
               return(
-                  <div key={author.slug} className="mb-3">
-                    {author.name}
+                  <div>
+                    <div className="d-flex">
+                      <div style={{width: "30%"}}>
+                        <GatsbyImage image={image}/>
+                        <p style={{fontSize: "0.8em"}}>{author.fotoCredit}</p>
+                      </div>
+                      <div key={author.slug} className="mb-3" style={{width: "70%"}}>
+                        <h1 className="mb-4" style={{fontWeight: "bold"}}>{author.name}</h1>
+                        <h2 style={{marginBottom: "2em"}} >{author.beruf}</h2>
+                        <p style={{width: "85%"}}>
+                          <MDXProvider>
+                            <MDXRenderer>
+                              {author.bio.childMdx.body}
+                            </MDXRenderer>
+                          </MDXProvider>
+                        </p>
+                      </div>
+                    </div>
                   </div>
               )})}
         </Layout>
@@ -27,6 +44,16 @@ query($slug: String!) {
   allContentfulAuthor(filter: { slug: { eq: $slug } }) {
     nodes {
       name
+      fotoCredit
+      beruf
+      bio {
+        childMdx {
+          body
+        }
+      }
+      image {
+        gatsbyImageData(width: 220)
+      }
       }
     }
   }
