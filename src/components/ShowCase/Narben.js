@@ -31,7 +31,7 @@ const Narben = () => {
     const coverImage = getImage(data.contentfulBook.coverImage)
     const book = data.contentfulBook
     return(
-        <div style={{background: `url("${book.backgroundImage.url}")`, height: "52vw"}}>
+        <div style={{background: `url("${book.backgroundImage.url}")`, height: "42em"}}>
           <div className="d-flex" style={{padding: "10em 8em", color: "#EEEEEE"}}>
             <div style={{width: "30%"}}>
               <section style={{background: "#FA2230", width: "12em", padding: "0.3em 0.5em", textAlign: "center", margin: "0.8em -2em", fontWeight: "bold"}}>NEUERSCHEINUNG</section>
