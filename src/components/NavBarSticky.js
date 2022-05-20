@@ -3,7 +3,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Link from './Link'
-import logo from '../images/rosenfeldverlag.svg'
+import logo from '../images/logo-weiss.png'
 import '../components/ShowCase/NavBarSticky.css'
 
 const NavBarSticky = ({ SiteTitle }) => {
