@@ -1,9 +1,0 @@
-.navbar-nav a {
-    color: #EEEEEE;
-    font-weight: 400;
-    text-shadow: 2px 2px #010101;
-}
-
-a:hover, a:active, a:focus {
-    color: rgb(102,153,153) !important;
-}

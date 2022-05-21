@@ -1,5 +1,11 @@
 @media(max-width: 600px) {
     .narben-container {
         grid-template-columns: 1fr !important;
+
+    }
+    .cover-container {
+        display: grid;
+        justify-content: end;
+        align-items: end;
     }
 }
