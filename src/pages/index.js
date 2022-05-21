@@ -88,9 +88,9 @@ function IndexPage() {
               </p>
             </div>
           </div>
-          <ShowCase/>
+          {/* <ShowCase/> */}
           <Termin/>
-            <Newsletter/>
+            {/* <Newsletter/> */}
             <Footer/>
         </div>
         </div>
