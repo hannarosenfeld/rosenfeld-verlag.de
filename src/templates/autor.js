@@ -18,9 +18,7 @@ export default function BookTemplate({ data }) {
                   <div>
                     <div className="d-flex">
                       <div style={{width: "30%"}}>
-                        <Link to={`autoren/${author.slug}`}>
                         <GatsbyImage image={image} className="mb-1"/>
-                        </Link>
                         <p style={{fontSize: "0.8em"}}>{author.fotoCredit}</p>
                       </div>
                       <div key={author.slug} className="mb-3" style={{width: "70%"}}>
