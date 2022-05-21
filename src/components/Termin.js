@@ -29,7 +29,7 @@ export default function Termin() {
               const image = getImage(termin.image)
               return(
                   <div style={{width: "100%", background: "#D3D8C3"}}>
-                    <div className="termin d-flex m-3 p-3" style={{gap: "5em"}}>
+                    <div className="termin d-flex m-3 p-3 justify-content-between" style={{gap: "5em"}}>
                       <div className="d-flex" style={{gap: "1em"}}>
                         <GatsbyImage image={image}/>
                         <h3 className="mt-4" style={{fontWeight: "bold"}}>{termin.autor}</h3>
