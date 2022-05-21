@@ -1,10 +1,10 @@
 import React, { useState }  from 'react'
 import {Modal} from 'react-bootstrap'
 
-import NavBarSticky from '../components/NavBarSticky.js'
+import NavBarSticky from '../components/ShowCase/NavBarSticky'
 import Newsletter from '../components/Newsletter'
 import lesung from '../videos/lesung.mp4'
-import ShowCase from '../components/ShowCaseBuch.js'
+import ShowCase from '../components/ShowCase/ShowCaseBuch'
 import Termin from '../components/Termin'
 import Narben from '../components/ShowCase/Narben'
 import Footer from '../components/Footer'

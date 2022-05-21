@@ -1,0 +1,11 @@
+@media (max-width: 500px) {
+    .showcase-container{
+    flex-direction: column;
+    border: 2px solid red;
+    padding: 8em 0px !important;
+    }
+    .showcase-description, .showcase-details, .showcase-image, .showcase-container {
+        minWidth: 100% !important;
+        border: 2px solid pink;
+    }
+}
