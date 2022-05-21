@@ -39,7 +39,7 @@ const Vjatka = () => {
               <div style={{width: "70%"}}>
                 <p className="mb-2" style={{fontWeight: "bold", fontSize: "0.9em"}}>{book.author.name}</p>
                 <h3 className="mb-4" style={{fontWeight: "bold"}}>{book.title}</h3>
-                <p>
+                <p className="mb-2">
 »Ausflug auf der Vịatka« erzählt von den Erfahrungen der Fotografin, die sie mit dem wirklichen Leben in der russischen Provinz machen konnte. Ihre Schwarzweißbilder schließen bewußt an die authentischen Momente der klassischen Fotografie an, aber sie verschärfen deren Ausdruck durch eine neue Intimität, die aus der künstlerischen, anti-journalistischen Haltung der Autorin erwächst.
                 </p>
                 <Link style={{fontWeight: "bold"}} to="/buecher/ausflug-auf-der-vjatka">
