@@ -4,7 +4,7 @@ import {Modal} from 'react-bootstrap'
 import NavBarSticky from '../components/ShowCase/NavBarSticky'
 import Newsletter from '../components/Newsletter'
 import lesung from '../videos/lesung.mp4'
-import ShowCase from '../components/ShowCase/Vjatka/Vjatka'
+import Vjatka from '../components/ShowCase/Vjatka/Vjatka'
 import Termin from '../components/Termin'
 import Narben from '../components/ShowCase/Narben/Narben'
 import Footer from '../components/Footer'
@@ -12,6 +12,39 @@ import Footer from '../components/Footer'
 import '../styles/index.css'
 
 
+
+
+function IndexPage() {
+
+    return (
+        <div>
+          <NavBarSticky/>
+          <Narben/>
+          <div style={{width: "95%", margin: "0 auto", padding: "1em"}}>
+            <div className="">
+              <div className="start-text">
+                <p style={{lineHeight: "2em", fontSize: "1.5em"}}>
+                  Was wir über die Welt wissen, das wissen wir vor allem
+                  durch Bilder und über Texte von Autorinnen und Autoren,
+                  die uns ein Fenster zu einem anderen Ort öffnen. Der
+                  Rosenfeld Verlag setzt nun nach über 20 Jahren sein
+                  Programm fort und begibt sich wieder auf Reisen zu
+                  inneren und äußeren Orten, die unser Leben bereichern
+                  werden.
+                </p>
+              </div>
+            </div>
+            <Vjatka/>
+            <Termin/>
+            {/* <Newsletter/> */}
+            <Footer/>
+          </div>
+        </div>
+    )
+}
+
+
+export default IndexPage
 
 // function VideoBanner(){
 //     const [isShown, setIsShown] = useState(false);
@@ -67,35 +100,3 @@ import '../styles/index.css'
 //         </div>
 //     )
 // }
-
-function IndexPage() {
-
-    return (
-        <div>
-        <NavBarSticky/>
-          <Narben/>
-          <div style={{width: "95%", margin: "0 auto", padding: "1em"}}>
-          <div className="">
-            <div className="start-text">
-              <p style={{lineHeight: "2em", fontSize: "1.5em"}}>
-                Was wir über die Welt wissen, das wissen wir vor allem
-                durch Bilder und über Texte von Autorinnen und Autoren,
-                die uns ein Fenster zu einem anderen Ort öffnen. Der
-                Rosenfeld Verlag setzt nun nach über 20 Jahren sein
-                Programm fort und begibt sich wieder auf Reisen zu
-                inneren und äußeren Orten, die unser Leben bereichern
-                werden.
-              </p>
-            </div>
-          </div>
-          {/* <ShowCase/> */}
-          <Termin/>
-            {/* <Newsletter/> */}
-            <Footer/>
-        </div>
-        </div>
-    )
-}
-
-
-export default IndexPage

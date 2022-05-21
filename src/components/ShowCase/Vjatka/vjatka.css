@@ -1,0 +1,6 @@
+@media(max-width: 900px) {
+    .vjatka-container {
+        grid-template-columns: 1fr !important;
+
+    }
+}
