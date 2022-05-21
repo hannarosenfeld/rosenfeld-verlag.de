@@ -36,7 +36,7 @@ function IndexPage() {
             </div>
             <Vjatka/>
             <Termin/>
-            {/* <Newsletter/> */}
+            <Newsletter/>
             <Footer/>
           </div>
         </div>
