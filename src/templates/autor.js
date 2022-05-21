@@ -14,6 +14,7 @@ export default function BookTemplate({ data }) {
         <Layout>
           {authoren.map(author => {
               const image = getImage(author.image)
+
               return(
                   <div>
                     <div className="d-flex">
@@ -33,9 +34,25 @@ export default function BookTemplate({ data }) {
                             </MDXProvider>
                           </p>
                           <div>
-                            <p style={{fontWeight: "bold", fontSize: "0.9em"}}>Im Rosenfeld Verlag erschienen:</p>
+                            <p style={{fontWeight: "bold", fontSize: "0.9em"}} className="mb-3">Im Rosenfeld Verlag erschienen:</p>
                             <div>
-
+                              {author.book.map( b => {
+                                  const cover = getImage(b.coverImage)
+                                  return(
+                                      <div>
+                                      <div className="d-flex" style={{gap: "1em"}}>
+                                        <div>
+                                          <GatsbyImage image={cover}/>
+                                        </div>
+                                        <div>
+                                          <h4>{b.title}</h4>
+                                          <p>{b.subtitle}</p>
+                                      </div>
+                                      </div>
+                                      </div>
+                                  )
+                              }
+                                              )}
                             </div>
                             <div>
                             </div>
@@ -59,8 +76,12 @@ query($slug: String!) {
       name
       fotoCredit
       beruf
-      books {
+      book {
         title
+        subtitle
+        coverImage {
+          gatsbyImageData(width: 220)
+        }
       }
       bio {
         childMdx {
