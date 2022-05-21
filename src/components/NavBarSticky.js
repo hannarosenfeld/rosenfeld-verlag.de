@@ -23,7 +23,7 @@ const NavBarSticky = ({ SiteTitle }) => {
   `)
     return (
 
-        <Navbar expand="lg" style={{
+        <Navbar className="navbar-dark" expand="lg" style={{
             width: "95%",
             margin: "0 auto",
             padding: "2em",
