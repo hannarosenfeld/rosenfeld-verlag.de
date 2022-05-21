@@ -22,7 +22,9 @@ export default function BookTemplate({ data }) {
                       </div>
                       <div style={{width: "75%"}}>
                         <div style={{marginBottom: "5em"}}>
-                          <GatsbyImage image={authorImage}/>
+                          <Link to={`../../autoren/${book.author.slug}`}>
+                            <GatsbyImage image={authorImage}/>
+                          </Link>
                           <p style={{fontWeight: "bold"}}>{book.author.name}</p>
                           <p>{book.author.beruf}</p>
                         </div>
@@ -57,6 +59,7 @@ query($slug: String!) {
       }
       author {
         name
+        slug
         beruf
         image {
           gatsbyImageData(width: 150, placeholder: BLURRED)
