@@ -34,7 +34,6 @@ p {
     margin: 0 !important;
 }
 
-
 .link:hover, .narbenlink:active, .narbenlink:focus {
     color: rgb(102,153,153) !important;
 }
@@ -127,4 +126,10 @@ a:hover, a:active, a:focus {
 .showcase-container {
     flex-direction: column;
 }
+}
+
+@media (max-width: 700px) {
+    .termin {
+        flex-direction: column;
+    }
 }

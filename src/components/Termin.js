@@ -1,7 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { FaBeer } from 'react-icons/fa'
+import { FaCalendar } from 'react-icons/fa'
 
+import '../styles/global.css'
 
 export default function Termin() {
     const data = useStaticQuery(graphql`
@@ -26,17 +29,19 @@ export default function Termin() {
               const image = getImage(termin.image)
               return(
                   <div style={{width: "100%", background: "#D3D8C3"}}>
-                    <div className="d-flex justify-content-between m-3 p-3">
+                    <div className="termin d-flex m-3 p-3" style={{gap: "5em"}}>
                       <div className="d-flex" style={{gap: "1em"}}>
                         <GatsbyImage image={image}/>
-                        <h3>{termin.autor}</h3>
+                        <h3 className="mt-4" style={{fontWeight: "bold"}}>{termin.autor}</h3>
                       </div>
-                      <div>
-                        <div className="d-flex" style={{gap: "1em"}}>
-                          <h3>{termin.datum} / {termin.title}</h3>
+                  <div className="mt-4 d-flex" style={{gap: "1em"}}>
+                        <div>
+                          <FaCalendar style={{fontSize: "4em"}} />
                         </div>
-                        <h3><a href={termin.link}>{termin.ort}</a></h3>
-                        <h3></h3>
+                        <div>
+                          <p style={{fontWeight: "bold"}}>{termin.datum} / {termin.title}</p>
+                          <p><a href={termin.link}>{termin.ort}</a></p>
+                        </div>
                       </div>
                     </div>
                   </div>
