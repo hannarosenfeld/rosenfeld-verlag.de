@@ -35,7 +35,7 @@ p {
 }
 
 
-.narbenlink:hover, .narbenlink:active, .narbenlink:focus {
+.link:hover, .narbenlink:active, .narbenlink:focus {
     color: rgb(102,153,153) !important;
 }
 

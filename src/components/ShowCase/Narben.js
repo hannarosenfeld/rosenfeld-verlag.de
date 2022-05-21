@@ -48,7 +48,7 @@ const Narben = () => {
                     </MDXRenderer>
                   </MDXProvider>
                 </p>
-                <Link to="/buecher/narben" ><section className="narbenlink" style={{color: "#EEEEEE"}}>mehr erfahren...</section></Link>
+                <Link to="/buecher/narben" ><section className="link" style={{color: "#EEEEEE"}}>mehr erfahren...</section></Link>
               </div>
             </div>
           </div>

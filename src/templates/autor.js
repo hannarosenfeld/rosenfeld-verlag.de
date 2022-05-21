@@ -47,6 +47,7 @@ export default function BookTemplate({ data }) {
                                         <div>
                                           <h4>{b.title}</h4>
                                           <p>{b.subtitle}</p>
+                                          <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
                                       </div>
                                       </div>
                                       </div>
@@ -78,6 +79,7 @@ query($slug: String!) {
       beruf
       book {
         title
+        slug
         subtitle
         coverImage {
           gatsbyImageData(width: 220)
