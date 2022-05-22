@@ -1,0 +1,5 @@
+.hero-banner {
+    border: 2px solid magenta;
+    background-image: url(../../../images/grohs.jpg);
+    zIndex: -1;
+}

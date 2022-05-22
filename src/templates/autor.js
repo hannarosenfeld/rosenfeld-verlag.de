@@ -54,9 +54,6 @@ export default function AuthorTemplate({ data }) {
                               }
                                               )}
                             </div>
-                            <div>
-                              {author.name === `Gernot Maria Grohs` ? console.log("I love you Hanna"): console.log(author.name)}
-                            </div>
                           </div>
                         </div>
                       </div>

@@ -7,7 +7,10 @@ import lesung from '../videos/lesung.mp4'
 import Vjatka from '../components/ShowCase/Vjatka/Vjatka'
 import Termin from '../components/Termin'
 import Narben from '../components/ShowCase/Narben/Narben'
+import Buch from '../components/ShowCase/25JahreUndEineNacht/25JahreUndEineNacht'
 import Footer from '../components/Footer'
+
+
 
 import '../styles/index.css'
 
@@ -34,6 +37,7 @@ function IndexPage() {
                 </p>
               </div>
             </div>
+            <Buch/>
             <VideoBanner/>
             <br/>
             <br/>
