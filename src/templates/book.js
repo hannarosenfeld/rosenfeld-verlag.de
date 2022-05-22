@@ -19,6 +19,7 @@ export default function BookTemplate({ data }) {
                     <div className="d-flex" style={{gap: "4em"}}>
                       <div style={{width: "25%"}}>
                         <GatsbyImage image={coverImage}/>
+                        {book.details ? <section className="book-description"><MDXProvider><MDXRenderer>{book.details.childMdx.body}</MDXRenderer></MDXProvider></section> : ''}
                       </div>
                       <div style={{width: "75%"}}>
                         <div style={{marginBottom: "5em"}}>
@@ -52,6 +53,11 @@ query($slug: String!) {
     nodes {
       title
       subtitle
+      details{
+        childMdx {
+          body
+        }
+      }
       description {
         childMdx {
           body
