@@ -4,7 +4,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
+
 import Layout from '../components/Layout'
+
+import amazon from '../images/amazon.png'
+
 
 
 export default function BookTemplate({ data }) {
@@ -20,6 +24,10 @@ export default function BookTemplate({ data }) {
                       <div style={{width: "25%"}}>
                         <GatsbyImage image={coverImage}/>
                         {book.details ? <section className="book-description"><MDXProvider><MDXRenderer>{book.details.childMdx.body}</MDXRenderer></MDXProvider></section> : ''}
+                        <div className="mt-5">
+                          <p className="mb-2">Hier bestellen:</p>
+                          <img src={amazon} />
+                  </div>
                       </div>
                       <div style={{width: "75%"}}>
                         <div style={{marginBottom: "5em"}}>
