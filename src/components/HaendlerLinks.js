@@ -19,7 +19,9 @@ export default function HaendlerLinks(props) {
                   console.log(logo)
                   return(
                       <div>
-                        <GatsbyImage image={logo} />
+                      <Link to={s.link}>
+                      <GatsbyImage image={logo} />
+                      </Link>
                       </div>
                   )
               })}
