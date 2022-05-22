@@ -44,7 +44,7 @@ export default function AuthorTemplate({ data }) {
                                             <GatsbyImage image={cover}/>
                                           </div>
                                           <div>
-                                            <h4>{b.title}</h4>
+                                            <h4 style={{fontWeight: "bold"}}>{b.title}</h4>
                                             <p>{b.subtitle}</p>
                                             <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
                                           </div>

@@ -38,6 +38,7 @@ function IndexPage() {
               </div>
             </div>
             <Buch/>
+            <br/>
             <VideoBanner/>
             <br/>
             <br/>
