@@ -20,7 +20,7 @@ export default function BookTemplate({ data }) {
                     <div className="d-flex">
                       <div style={{width: "30%"}}>
                         <GatsbyImage image={image} className="mb-1"/>
-                        <p style={{fontSize: "0.8em"}}>{author.fotoCredit}</p>
+                        <p style={{fontSize: "0.8em"}}>Foto: {author.fotoCredit}</p>
                       </div>
                       <div key={author.slug} className="mb-3" style={{width: "70%"}}>
                         <h1 className="mb-4" style={{fontWeight: "bold"}}>{author.name}</h1>
