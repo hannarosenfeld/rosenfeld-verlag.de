@@ -40,22 +40,23 @@ export default function BookTemplate({ data }) {
                                   const cover = getImage(b.coverImage)
                                   return(
                                       <div>
-                                      <div className="d-flex" style={{gap: "1em"}}>
-                                        <div>
-                                          <GatsbyImage image={cover}/>
+                                        <div className="d-flex" style={{gap: "1em"}}>
+                                          <div>
+                                            <GatsbyImage image={cover}/>
+                                          </div>
+                                          <div>
+                                            <h4>{b.title}</h4>
+                                            <p>{b.subtitle}</p>
+                                            <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
+                                          </div>
                                         </div>
-                                        <div>
-                                          <h4>{b.title}</h4>
-                                          <p>{b.subtitle}</p>
-                                          <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
-                                      </div>
-                                      </div>
                                       </div>
                                   )
                               }
                                               )}
                             </div>
                             <div>
+                              {author.name === `Gernot Maria Grohs` ? console.log("I love you Hanna"): console.log(author.name)}
                             </div>
                           </div>
                         </div>

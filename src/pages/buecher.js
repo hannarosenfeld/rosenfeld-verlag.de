@@ -44,16 +44,17 @@ const BuecherPage = props => {
                           <Card.Body>
                             <div className="ipad-title">
                               <Card.Title style={{fontSize: "1rem", fontWeight: "bold"}}>{book.title}</Card.Title>
-
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
-                                <Card.Link className="ipad-link" href={`buecher/${book.slug}`}>
-                                  <Card.Img
-                                    className="autor-image mb-3"
-                                    src={book.coverImage.url}
-                                    style={{width: "220px", height: "17em", objectFit: "cover"}}
-                                    alt={book.title}/>
+                                <Card.Link className="ipad-link" href={`buecher/${book.slug}`}  >
+                                  <div style={{height: "23em"}}>
+                                    <Card.Img
+                                      className="autor-image mb-3"
+                                      src={book.coverImage.url}
+                                      style={{objectFit: "cover"}}
+                                      alt={book.title}/>
+                                  </div>
                                 </Card.Link>
                                 <Card.Subtitle className="mt-3 mb-4" style={{height: "5em", fontSize: "0.9em", fontWeight: "bold"}}>{book.subtitle}</Card.Subtitle>
                                 {/* <Card.Subtitle style={{fontSize: "0.7em"}}className="mb-3">Foto: {autor.fotoCredit}</Card.Subtitle> */}
