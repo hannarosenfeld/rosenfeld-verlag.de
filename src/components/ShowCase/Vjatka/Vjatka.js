@@ -31,7 +31,7 @@ const Vjatka = () => {
     const image = getImage(data.contentfulBook.coverImage)
     return(
         <div className="vjatka-container" style={{display: "grid", gridTemplateColumns: "9fr 5fr", height: "100%", background: "#CDC5C2"}}>
-          <div style={{padding: "2em 1em 2em 4em"}}>
+          <div style={{padding: "2em 2em 2em 4em"}}>
             <div className="d-flex" style={{gap: "1em"}}>
               <div style={{width: "30%"}}>
                 <GatsbyImage image={image}/>
