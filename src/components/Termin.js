@@ -28,7 +28,7 @@ export default function Termin() {
           {data.allContentfulTermin.nodes.map(termin => {
               const image = getImage(termin.image)
               return(
-                  <div style={{width: "100%", background: "#D3D8C3"}}>
+                  <div style={{width: "100%", background: "#B5CEB1"}}>
                     <div className="termin d-flex m-3 p-3 justify-content-between" style={{gap: "5em"}}>
                       <div className="d-flex" style={{gap: "1em"}}>
                         <GatsbyImage image={image}/>
