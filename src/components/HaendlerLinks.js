@@ -13,7 +13,7 @@ export default function HaendlerLinks(props) {
         return(
             <div className="mt-5">
               <p>Hier bestellen: </p>
-            <div className="d-flex flex-column mt-4" style={{gap: "1.5em"}}>
+            <div className="d-flex flex-column mt-3" style={{gap: "1.5em"}}>
               {shop.map(s => {
                   const logo = getImage(s.haendler.logo)
                   console.log(logo)
@@ -29,6 +29,7 @@ export default function HaendlerLinks(props) {
         )
     } else {
         console.log('no haendlerlink')
+        return null
     }
 
 }
