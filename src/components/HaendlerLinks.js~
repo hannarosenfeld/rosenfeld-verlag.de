@@ -1,0 +1,21 @@
+function HaendlerLinks({ data }) {
+    const books = data.allContentfulBook.nodes
+
+    useEffect(() => {
+        {books.map(book => {
+            if(book.haendlerLink){
+                const haendler = book.haendlerLink
+                const logo = getImage(haendler.haendler.logo)
+                return(
+                    <div>
+                      <Link to={haendler.link}>
+                        <GatsbyImage image={logo}/>
+                      </Link>
+                    </div>
+                )
+            } else {
+                console.log('no haendlerlink')
+            }
+        })}
+    })
+}
