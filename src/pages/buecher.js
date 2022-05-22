@@ -42,17 +42,17 @@ const BuecherPage = props => {
                       <div className="d-flex flex-wrap" >
                         <Card className="mb-5" style={{ width: '15em' }} key={book.slug}>
                           <Card.Body>
-                            <div className="ipad-title">
+                            <div className="ipad-title mb-2">
                               <Card.Title style={{fontSize: "1rem", fontWeight: "bold"}}>{book.title}</Card.Title>
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
                                 <Card.Link className="ipad-link" href={`buecher/${book.slug}`}  >
-                                  <div style={{height: "23em"}}>
+                                  <div style={{height: "21em"}}>
                                     <Card.Img
                                       className="autor-image mb-3"
                                       src={book.coverImage.url}
-                                      style={{objectFit: "cover"}}
+                                      style={{objectFit: "cover", width: "14em"}}
                                       alt={book.title}/>
                                   </div>
                                 </Card.Link>
