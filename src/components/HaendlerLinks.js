@@ -7,7 +7,6 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 export default function HaendlerLinks(props) {
     const book = props.book
 
-
     if(book.haendlerLink){
         const shop = book.haendlerLink
         return(
@@ -30,7 +29,6 @@ export default function HaendlerLinks(props) {
             </div>
         )
     } else {
-        console.log('no haendlerlink')
         return null
     }
 
