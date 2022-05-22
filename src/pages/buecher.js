@@ -31,33 +31,48 @@ export const query = graphql`
 `
 
 
-const BooksPage = props => {
+const BuecherPage = props => {
     return(
         <Layout>
-          <div>
+          <main className="d-flex flex-column" >
             <h2 className="mb-5">Bücher</h2>
-            <div className="books-container" style={{display: "flex", gap: "1.5em"}}>
+            <div className="d-flex flex-wrap autoren-container" style={{gap: "1.5em"}}>
               {props.data.allContentfulBook.nodes.map(book => {
                   return(
-                      <Card className="book-container d-flex flex-column" style={{width: "15em"}} key={book.id}>
-                        <Card.Body>
-                          <Card.Title className="mb-3" style={{ fontWeight: "bold", fontSize: "1rem"}}>{book.title}</Card.Title>
-                          <Card.Link href={`buecher/${book.slug}`}>
-                            <Card.Img style={{width: "220px", boxShadow: "6px 6px 6px #c6c6c6"}} src={book.coverImage.url} alt={book.title}/>
-                          </Card.Link>
-                          <div className="book-description mb-4 mt-4" style={{width: "90%"}}>
-                            <p style={{fontWeight: "bold", fontSize: "0.9em"}}>{book.subtitle}</p>
-                            <Card.Text style={{fontSize: "0.9em"}} className="mt-3">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
-                          </div>
-                      <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
-                        </Card.Body>
-                      </Card>
+                      <div className="d-flex flex-wrap" >
+                        <Card className="mb-5" style={{ width: '15em' }} key={book.slug}>
+                          <Card.Body>
+                            <div className="ipad-title">
+                              <Card.Title style={{fontSize: "1rem", fontWeight: "bold"}}>{book.title}</Card.Title>
+
+                            </div>
+                            <div className="ipad-flex">
+                              <div className="ipad-author-picture">
+                                <Card.Link className="ipad-link" href={`buecher/${book.slug}`}>
+                                  <Card.Img
+                                    className="autor-image mb-3"
+                                    src={book.coverImage.url}
+                                    style={{width: "220px", height: "17em", objectFit: "cover"}}
+                                    alt={book.title}/>
+                                </Card.Link>
+                                <Card.Subtitle className="mt-3 mb-4" style={{height: "5em", fontSize: "0.9em", fontWeight: "bold"}}>{book.subtitle}</Card.Subtitle>
+                                {/* <Card.Subtitle style={{fontSize: "0.7em"}}className="mb-3">Foto: {autor.fotoCredit}</Card.Subtitle> */}
+                              </div>
+                              <div className="ipad-author-bio">
+                                <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
+                                <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
+                              </div>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      </div>
                   )
               })}
             </div>
-          </div>
+          </main>
         </Layout>
-    )}
+    )
+}
 
 
-export default BooksPage
+export default BuecherPage
