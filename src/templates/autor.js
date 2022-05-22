@@ -7,12 +7,11 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 import Layout from '../components/Layout'
 
 
-export default function BookTemplate({ data }) {
-    const authoren = data.allContentfulAuthor.nodes
-    console.log(data.allContentfulAuthor.nodes)
+export default function AuthorTemplate({ data }) {
+    const authors = data.allContentfulAuthor.nodes
     return (
         <Layout>
-          {authoren.map(author => {
+          {authors.map(author => {
               const image = getImage(author.image)
 
               return(

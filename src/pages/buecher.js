@@ -36,7 +36,7 @@ const BuecherPage = props => {
         <Layout>
           <main className="d-flex flex-column" >
             <h2 className="mb-5">Bücher</h2>
-            <div className="d-flex flex-wrap autoren-container" style={{gap: "1.5em"}}>
+            <div className="d-flex flex-wrap autoren-container" style={{gap: "3em"}}>
               {props.data.allContentfulBook.nodes.map(book => {
                   return(
                       <div className="d-flex flex-wrap" >
