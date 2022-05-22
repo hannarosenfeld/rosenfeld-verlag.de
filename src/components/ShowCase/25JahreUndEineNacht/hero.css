@@ -3,7 +3,7 @@
     object-fit: cover;
     zIndex: -1;
     height: 40em;
-    margin: 3em auto;
+    margin: 0 auto;
     display: grid;
     gap: 1em;
     grid-template-columns: 1fr  2fr 5fr 3fr;

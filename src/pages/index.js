@@ -39,14 +39,13 @@ function IndexPage() {
             </div>
             <Buch/>
             <br/>
+            <br/>
+            <br/>
             <VideoBanner/>
             <br/>
             <br/>
             <br/>
-            <br/>
-            <br/>
             <Vjatka/>
-            <br/>
             <br/>
             <br/>
             <Termin/>
