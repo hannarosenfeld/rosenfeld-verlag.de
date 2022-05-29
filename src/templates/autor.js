@@ -17,7 +17,7 @@ export default function AuthorTemplate({ data }) {
               return(
                   <div>
                     <div className="d-flex" style={{gap: "2em"}}>
-                      <div style={{width: "30%"}}>
+                      <div style={{width: "30%", padding: "0 1em", margin: "0 1em"}}>
                         <GatsbyImage image={image} className="mb-1"/>
                         <p style={{fontSize: "0.8em"}}>Foto: {author.fotoCredit}</p>
                       </div>
