@@ -1,0 +1,19 @@
+.author-books-container .gatsby-image-wrapper .gatsby-image-wrapper-constrained {
+    max-width: 8em;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .author-books-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .author-books-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+
+}
