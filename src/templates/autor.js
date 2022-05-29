@@ -39,10 +39,8 @@ export default function AuthorTemplate({ data }) {
                                   const cover = getImage(b.coverImage)
                                   return(
                                       <div>
-                                        <div className="d-flex" style={{gap: "1em"}}>
-                                          <div>
+                                        <div className="d-flex" style={{gap: "2em"}}>
                                             <GatsbyImage image={cover}/>
-                                          </div>
                                           <div>
                                             <h4 style={{fontWeight: "bold"}}>{b.title}</h4>
                                             <p>{b.subtitle}</p>

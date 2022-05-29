@@ -11,9 +11,9 @@ const Buch = () => (
         <div className="hero-banner">
           <div style={{zIndex: "1", gridColumn: "2/4", gridRow: "2/4"}}>
             <div className="hero-content" className="d-flex" style={{gap: "2em"}}>
-              <img src={cover} style={{width: "12em", alignSelf: "start"}}/>
+              <img src={cover} style={{width: "12em"}}/>
               <div className="d-flex">
-                <div className="hero-text" style={{width: "95%"}}>
+                <div className="hero-text d-flex flex-column" style={{width: "95%", gap: "1em"}}>
                   <h3>﻿Gernot Maria Grohs</h3>
                   <h2>﻿25 Jahre und eine Nacht</h2>
                   <p>﻿Es ist der 45. Hochzeitstag von Ludwig
