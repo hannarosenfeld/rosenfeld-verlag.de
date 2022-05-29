@@ -36,7 +36,7 @@ const Vjatka = () => {
               <div style={{width: "30%"}}>
                 <GatsbyImage image={image}/>
               </div>
-              <div style={{width: "70%"}}>
+              <div style={{width: "70%", margin: "0 1em"}}>
                 <p className="mb-2" style={{fontWeight: "bold", fontSize: "0.9em"}}>{book.author.name}</p>
                 <h3 className="mb-4" style={{fontWeight: "bold"}}>{book.title}</h3>
                 <p className="mb-2">
