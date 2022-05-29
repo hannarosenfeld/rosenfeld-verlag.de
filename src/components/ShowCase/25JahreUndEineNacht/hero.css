@@ -1,24 +1,35 @@
-.hero-banner {
-    background-image: url(../../../images/grohs.jpg);
-    object-fit: cover;
-    zIndex: -1;
-    height: 40em;
-    margin: 0 auto;
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr  2fr 5fr 3fr;
-    grid-template-rows: 2fr 4fr 3fr;
+body, html {
+    height: 100%;
 }
 
+/* The hero image */
+.hero-banner {
+    background-image: url(../../../images/grohs.jpg);
+  /* Set a specific height */
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  zIndex: -1;
+}
 
-@media(max-width: 900px) {
-    .hero-banner {
-        grid-template-columns: 1fr;
-    }
+/* Place text in the middle of the image */
+.hero-content {
+    position: absolute;
+}
+
+@media only screen and (max-width: 800px) {
     .hero-content {
-
+        margin: 1em !important;
     }
-    .hero-text{
-
+    .hero-content .truncate{
+        display: none;
+    }
+    .hero-content .hidden {
+        display: none;
+    }
+    .hero-content img{
+        width: 8em;
     }
 }
