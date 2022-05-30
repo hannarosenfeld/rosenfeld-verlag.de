@@ -40,7 +40,7 @@ const BuecherPage = props => {
               {props.data.allContentfulBook.nodes.map(book => {
                   return(
                       <div className="d-flex flex-wrap" >
-                        <Card className="mb-5" style={{ width: '15em' }} key={book.slug}>
+                        <Card className="mb-5" style={{ width: '15em', margin: "1em" }} key={book.slug}>
                           <Card.Body>
                             <div className="ipad-title mb-2">
                               <Card.Title style={{fontSize: "1rem", fontWeight: "bold"}}>{book.title}</Card.Title>
