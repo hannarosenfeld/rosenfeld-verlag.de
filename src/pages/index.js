@@ -39,6 +39,7 @@ function IndexPage() {
             </div>
             <Buch/>
             <br/>
+            <Termin/>
             <br/>
             <br/>
             <VideoBanner/>
@@ -48,7 +49,7 @@ function IndexPage() {
             <Vjatka/>
             <br/>
             <br/>
-            <Termin/>
+
             <Newsletter/>
             <Footer/>
           </div>
