@@ -30,13 +30,13 @@ export default function Termin() {
               return(
                   <div style={{width: "100%", background: "#B5CEB1"}}>
                     <div className="termin d-flex m-3 p-3 justify-content-between" style={{gap: "5em"}}>
-                      <div className="d-flex" style={{gap: "1em"}}>
+                      <div className="d-flex" style={{gap: "1em", margin: "0 1em"}}>
                         <GatsbyImage image={image}/>
                         <h3 className="mt-4" style={{fontWeight: "bold"}}>{termin.autor}</h3>
                       </div>
-                  <div className="mt-4 d-flex" style={{gap: "1em"}}>
+                      <div className="mt-4 d-flex" style={{gap: "1em"}}>
                         <div>
-                          <FaCalendar style={{fontSize: "4em"}} />
+                          <FaCalendar style={{fontSize: "4em", margin: "0 0.2em"}} />
                         </div>
                         <div>
                           <p style={{fontWeight: "bold"}}>{termin.datum} / {termin.title}</p>
