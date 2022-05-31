@@ -33,7 +33,7 @@ const Vjatka = () => {
         <div className="vjatka-container" style={{display: "grid", gridTemplateColumns: "9fr 5fr", height: "100%", background: "#CDC5C2"}}>
           <div style={{padding: "2em 2em 2em 4em"}}>
             <div className="d-flex" style={{gap: "1em"}}>
-              <div style={{width: "30%"}}>
+              <div style={{width: "30%", marginRight: "1em"}}>
                 <GatsbyImage image={image}/>
               </div>
               <div style={{width: "70%", margin: "0 1em"}}>
