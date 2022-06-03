@@ -39,6 +39,7 @@ function IndexPage() {
             </div>
             <Buch/>
             <br/>
+            <br/>
             <Termin/>
             <br/>
             <br/>
