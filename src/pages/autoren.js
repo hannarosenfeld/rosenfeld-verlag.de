@@ -25,7 +25,7 @@ const AutorenPage = props => {
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
-                                <Card.Link className="ipad-link" href={`autoren/${autor.slug}`}>
+                                <Card.Link className="ipad-link" href={`/${autor.slug}`}>
                                   <Card.Img
                                     className="autor-image mb-3"
                                     src={autor.image.url}
