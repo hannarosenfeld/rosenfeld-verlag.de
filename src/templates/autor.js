@@ -17,6 +17,14 @@ const GernotAuszeichnungen = () => (
     </>
 )
 
+const AnnetteAuszeichnungen = () => (
+    <>
+      <h5 style={{fontWeight: "bold"}}>Auszeichnungen:</h5>
+      ﻿<p><b>2010</b> ﻿Kulturpreis der Sudetendeutschen Akademie in der Sparte Musik</p>
+      ﻿<p><b>2015</b> ﻿Johann-Wenzel-Stamitz Preis der Künstlergilde Esslingen</p>
+    </>
+)
+
 
 const WeitereBuecherVonGross = () => (
     <>
@@ -89,7 +97,7 @@ export default function AuthorTemplate({ data }) {
                           </p>
 
                           <div className="mb-5">
-                            {author.name = "Gernot Maria Grohs" ? <GernotAuszeichnungen/> : console.log('no') }
+
                           </div>
 
                           <div className="mb-5">
@@ -115,7 +123,7 @@ export default function AuthorTemplate({ data }) {
                           </div>
 
                           <div className="mb-5">
-                            {author.name = "Gernot Maria Grohs" ? <WeitereBuecherVonGross/> : console.log('no') }
+
                           </div>
 
                         </div>
