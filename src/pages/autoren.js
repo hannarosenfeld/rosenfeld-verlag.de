@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
+import { BrowserRouter } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { graphql} from 'gatsby'
 import Card from 'react-bootstrap/Card'
 import Layout from '../components/Layout.js'
 import '../styles/autoren.css'
 
-const AutorenPage = props => {
-    const [currentAuthor, setCurrentAuthor] = useState('')
 
+
+const AutorenPage = props => {
     const author = props.data.allContentfulAuthor.nodes
 
     return(
+        <BrowserRouter>
         <Layout>
           <main className="d-flex flex-column" >
             <h2 className="mb-5">Unsere Autorinnen und Autoren</h2>
@@ -36,7 +39,7 @@ const AutorenPage = props => {
                               </div>
                               <div className="ipad-author-bio">
                                 <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" href={`autoren/${autor.slug}`}>...weiterlesen</Card.Link>
+                                <Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" to={`autoren/${autor.slug}`}>...weiterlesen</Link>
                               </div>
                             </div>
                           </Card.Body>
@@ -47,6 +50,7 @@ const AutorenPage = props => {
             </div>
           </main>
         </Layout>
+        </BrowserRouter>
     )
 }
 
