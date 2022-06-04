@@ -37,8 +37,11 @@ export default function AuthorTemplate({ data }) {
                           </p>
 
                           <div className="mb-5">
-                            {author.auszeichnungen ? <div><h5><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5></div>))}</div></div> : ''}
+                            {author.auszeichnungen ? <div><h5 className="mb-3"><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5></div>))}</div></div> : ''}
                           </div>
+
+                          {author.youtubeKanal ? <div className="mb-5"><h5 className="mb-3"><b>Youtube Kanal von Gernot Maria Grohs:</b></h5><a href={author.youtubeKanal.link}><img src={author.youtubeKanal.image.url}/></a></div> : <h1>hihinein</h1>}
+
 
                   <div className="mb-5">
                             <h5 style={{fontWeight: "bold"}} className="mb-3">Im Rosenfeld Verlag erschienen:</h5>
@@ -84,6 +87,7 @@ query($slug: String!) {
       fotoCredit
       beruf
       youtubeKanal {
+        link
         image {
           gatsbyImageData(width: 500)
           url
