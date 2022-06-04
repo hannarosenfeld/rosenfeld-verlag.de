@@ -87,6 +87,12 @@ query($slug: String!) {
       name
       fotoCredit
       beruf
+      youtubeKanal {
+        image {
+          gatsbyImageData(width: 500)
+          url
+        }
+      }
 auszeichnungen {
         jahr
         titel
