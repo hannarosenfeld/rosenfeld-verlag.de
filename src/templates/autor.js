@@ -37,14 +37,10 @@ export default function AuthorTemplate({ data }) {
                           </p>
 
                           <div className="mb-5">
-                            {author.auszeichnungen.map(auszeichnung => (
-                                <div>
-                                  <h5><b>{auszeichnung.jahr}</b> {auszeichnung.titel}</h5>
-                                  </div>
-                            ))}
+                            {author.auszeichnungen ? <div><h5><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5></div>))}</div></div> : ''}
                           </div>
 
-                          <div className="mb-5">
+                  <div className="mb-5">
                             <h5 style={{fontWeight: "bold"}} className="mb-3">Im Rosenfeld Verlag erschienen:</h5>
                             <div>
                               {author.book.map(b => {
