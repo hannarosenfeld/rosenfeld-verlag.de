@@ -9,66 +9,6 @@ import Layout from '../components/Layout'
 import "../styles/autor.css"
 
 
-const GernotAuszeichnungen = () => (
-    <>
-      <h5 style={{fontWeight: "bold"}}>Auszeichnungen:</h5>
-      ﻿<p><b>2010</b> ﻿Kulturpreis der Sudetendeutschen Akademie in der Sparte Musik</p>
-      ﻿<p><b>2015</b> ﻿Johann-Wenzel-Stamitz Preis der Künstlergilde Esslingen</p>
-    </>
-)
-
-const AnnetteAuszeichnungen = () => (
-    <>
-      <h5 style={{fontWeight: "bold"}}>Auszeichnungen:</h5>
-      ﻿<p><b>2010</b> ﻿Kulturpreis der Sudetendeutschen Akademie in der Sparte Musik</p>
-      ﻿<p><b>2015</b> ﻿Johann-Wenzel-Stamitz Preis der Künstlergilde Esslingen</p>
-    </>
-)
-
-
-const WeitereBuecherVonGross = () => (
-    <>
-      <h5 className="mb-3" style={{fontWeight: "bold"}}>Weitere Bücher von Gernot Maria Grohs:</h5>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Die Erlösung des H.“ - eine Erzählung</p>
-        <p>1. Auflage 10.März 2020</p>
-        <p>Manuela Kinzel Verlag, ISBN 978-3-95544-137-1, 142 Seiten</p>
-      </div>
-      <br/>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Wanderers Gedanken“ - Lyrik, Texte und Ansichten</p>
-        <p>1. Auflage September 2019</p>
-        <p>2. Auflage November 2019</p>
-        <p>Manuela Kinzel Verlag, ISBN 978-3-95544-131-9, 140 Seiten</p>
-      </div>
-      <br/>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Die merkwürdigen Abenteuer des kleinen Fis“</p>
-        <p>Ein Buch für kleine und große Erwachsene, Pro BUSINESS Verlag Berlin</p>
-        <p>ISBN 978-3-939533-96-2, 1. Auflage Dez. 2007,</p>
-        <p>151 Seiten mit 10 Zeichnungen von Julia M. Grohs– 6 Jahre</p>
-      </div>
-      <br/>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Bildung ist ein großes Vergnügen“</p>
-        <p>Manuela Kinzel Verlag, 1. Auflage 2004, ISBN 3-934071-55-4, 220 Seiten</p>
-      </div>
-      <br/>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Gottfried Kirchhoff 1685-1746 – ein Mühlbecker kreuzt die Wege von Johann Sebastian Bach und Georg Friedrich Händel“</p>
-        <p>Manuela Kinzel Verlag, ISBN 3-934071-57-0, 60 Seiten,</p>
-        <p>zahlreiche Abbildungen und Notenbeispiele als Erstveröffentlichung,</p>
-        <p>1.Auflage Sep. 2004, 2. Auflage Okt. 2006</p>
-      </div>
-      <br/>
-      <div>
-        <p style={{fontWeight: "bold"}}>„Georg Trexler – Wurzeln, Wirken, Werke, Vermächtnis“</p>
-        <p>Kamprad-Verlag Altenburg, 1. Auflage 2003, ISBN 3-930550-24-5,</p>
-        <p>264 Seiten, zahlreiche Abbildungen und Notenbeispiele</p>
-      </div>
-    </>
-)
-
 
 export default function AuthorTemplate({ data }) {
     const authors = data.allContentfulAuthor.nodes
@@ -97,13 +37,17 @@ export default function AuthorTemplate({ data }) {
                           </p>
 
                           <div className="mb-5">
-
+                            {author.auszeichnungen.map(auszeichnung => (
+                                <div>
+                                  <h5><b>{auszeichnung.jahr}</b> {auszeichnung.titel}</h5>
+                                  </div>
+                            ))}
                           </div>
 
                           <div className="mb-5">
                             <h5 style={{fontWeight: "bold"}} className="mb-3">Im Rosenfeld Verlag erschienen:</h5>
                             <div>
-                              {author.book.map( b => {
+                              {author.book.map(b => {
                                   const cover = getImage(b.coverImage)
                                   return(
                                       <div >
@@ -124,11 +68,6 @@ export default function AuthorTemplate({ data }) {
                                               )}
                             </div>
                           </div>
-
-                          <div className="mb-5">
-
-                          </div>
-
                         </div>
                       </div>
                     </div>
@@ -148,6 +87,10 @@ query($slug: String!) {
       name
       fotoCredit
       beruf
+auszeichnungen {
+        jahr
+        titel
+      }
       book {
         title
         slug
