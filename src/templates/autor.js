@@ -56,8 +56,15 @@ export default function AuthorTemplate({ data }) {
                                         >
                                           <GatsbyImage image={cover} style={{minWidth: "8em", maxWidth: "10em"}}/>
                                           <div>
-                                            <h4 style={{fontWeight: "bold"}}>{b.title}</h4>
-                                            <p>{b.subtitle}</p>
+                                            <h5 style={{fontWeight: "bold"}}>{b.title}</h5>
+                                            <p className="mb-2">{b.subtitle}</p>
+                                            <p className="mb-3" style={{fontSize: "12px"}}>
+                                            <MDXProvider>
+                                              <MDXRenderer>
+                                                {b.details.childMdx.body}
+                                              </MDXRenderer>
+                                      </MDXProvider>
+                                      </p>
                                             <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
                                           </div>
                                         </div>
@@ -98,6 +105,11 @@ auszeichnungen {
         titel
       }
       book {
+        details {
+          childMdx {
+            body
+          }
+        }
         title
         slug
         subtitle
