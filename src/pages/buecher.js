@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql} from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Card from 'react-bootstrap/Card'
 
 import Layout from '../components/Layout.js'
@@ -47,21 +47,27 @@ const BuecherPage = props => {
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
-                                <Card.Link className="ipad-link" href={`buecher/${book.slug}`}  >
+                                <Link className="ipad-link" to={`${book.slug}`} state={{ fromFeed: true }} >
                                   <div style={{height: "21em"}}>
                                     <Card.Img
                                       className="autor-image mb-3"
                                       src={book.coverImage.url}
                                       style={{objectFit: "cover", width: "14em"}}
-                                      alt={book.title}/>
+                                      alt={book.title}
+
+                                    />
                                   </div>
-                                </Card.Link>
+                                </Link>
                                 <Card.Subtitle className="mt-3 mb-4" style={{height: "5em", fontSize: "0.9em", fontWeight: "bold"}}>{book.subtitle}</Card.Subtitle>
                                 {/* <Card.Subtitle style={{fontSize: "0.7em"}}className="mb-3">Foto: {autor.fotoCredit}</Card.Subtitle> */}
                               </div>
                               <div className="ipad-author-bio">
                                 <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{book.childContentfulBookDescriptionTextNode.description}</Card.Text>
-                                <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" href={`buecher/${book.slug}`}>...weiterlesen</Card.Link>
+                                <Link
+                                  style={{fontSize: "0.8rem", fontWeight: "bold"}}
+                                  className="ipad-link" to={`${book.slug}`}
+                                  state={{ fromFeed: true }}
+                                >...weiterlesen</Link>
                               </div>
                             </div>
                           </Card.Body>
