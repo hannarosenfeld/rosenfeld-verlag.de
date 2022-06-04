@@ -21,7 +21,11 @@ const AutorenPage = props => {
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
-                                <Link className="ipad-link" to={`autoren/${autor.slug}`}>
+                                <Link
+                                  className="ipad-link"
+                                  to={`${autor.slug}`}
+                                  state={{ fromFeed: true }}
+                                >
                                   <Card.Img
                                     className="autor-image mb-3"
                                     src={autor.image.url}
@@ -32,7 +36,12 @@ const AutorenPage = props => {
                               </div>
                               <div className="ipad-author-bio">
                                 <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                <Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" to={`autoren/${autor.slug}`}>...weiterlesen</Link>
+                                <Link
+                                  style={{fontSize: "0.8rem", fontWeight: "bold"}}
+                                  className="ipad-link"
+                                  to={`${autor.slug}`}
+                                  state={{ fromFeed: true }}
+                                >...weiterlesen</Link>
                               </div>
                             </div>
                           </Card.Body>
