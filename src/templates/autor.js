@@ -37,14 +37,13 @@ export default function AuthorTemplate({ data }) {
                           </p>
 
                           <div className="mb-5">
-                            {author.auszeichnungen ? <div><h5 className="mb-3"><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5></div>))}</div></div> : ''}
-                            {author.auszeichnungen.image ? <>{author.auszeichnungen.map(auszeichnung => (<img src={auszeichnung.image.url}/>))}</> : ''}
+                            {author.auszeichnungen ? <div><h5 className="mb-3"><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5>{auszeichnung.image ? <img className="mb-3 mt-3" style={{width: "230px"}}src={auszeichnung.image.url}/> : ''}</div>))}</div></div> : ''}
                           </div>
 
                           {author.youtubeKanal ? <div className="mb-5"><h5 className="mb-3"><b>Youtube Kanal von Gernot Maria Grohs:</b></h5><a href={author.youtubeKanal.link}><img src={author.youtubeKanal.image.url}/></a></div> : ''}
 
 
-                  <div className="mb-5">
+                  <div className="mt-5 mb-5">
                             <h5 style={{fontWeight: "bold"}} className="mb-3">Im Rosenfeld Verlag erschienen:</h5>
                             <div>
                               {author.book.map(b => {
@@ -110,6 +109,9 @@ query($slug: String!) {
 auszeichnungen {
         jahr
         titel
+        image {
+          url
+        }
       }
       book {
  haendlerLink {
