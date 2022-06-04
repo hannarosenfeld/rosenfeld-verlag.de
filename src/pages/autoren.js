@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql} from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Card from 'react-bootstrap/Card'
 import Layout from '../components/Layout.js'
 import '../styles/autoren.css'
@@ -21,18 +21,18 @@ const AutorenPage = props => {
                             </div>
                             <div className="ipad-flex">
                               <div className="ipad-author-picture">
-                                <Card.Link className="ipad-link" href={`autoren/${autor.slug}`}>
+                                <Link className="ipad-link" to={`autoren/${autor.slug}`}>
                                   <Card.Img
                                     className="autor-image mb-3"
                                     src={autor.image.url}
                                     style={{width: "220px", height: "17em", objectFit: "cover"}}
                                     alt={autor.name}/>
-                                </Card.Link>
+                                </Link>
                                 <Card.Subtitle style={{fontSize: "0.7em"}}className="mb-3">Foto: {autor.fotoCredit}</Card.Subtitle>
                               </div>
                               <div className="ipad-author-bio">
                                 <Card.Text style={{fontSize: "0.8em"}} className="autoren-bio mb-1 ml-1">{autor.bio.bio}</Card.Text>
-                                <Card.Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" href={`autoren/${autor.slug}`}>...weiterlesen</Card.Link>
+                                <Link  style={{fontSize: "0.8rem", fontWeight: "bold"}} className="ipad-link" to={`autoren/${autor.slug}`}>...weiterlesen</Link>
                               </div>
                             </div>
                           </Card.Body>
