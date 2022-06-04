@@ -107,7 +107,10 @@ export default function AuthorTemplate({ data }) {
                                   const cover = getImage(b.coverImage)
                                   return(
                                       <div >
-                                        <div className="d-flex author-books-container" style={{gap: "2em", marginRight: "1em"}}>
+                                        <div
+                                          className="d-flex author-books-container"
+                                          style={{gap: "5%", marginRight: "5%"}}
+                                        >
                                           <GatsbyImage image={cover} style={{minWidth: "8em", maxWidth: "10em"}}/>
                                           <div>
                                             <h4 style={{fontWeight: "bold"}}>{b.title}</h4>
