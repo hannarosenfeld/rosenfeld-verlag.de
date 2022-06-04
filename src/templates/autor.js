@@ -38,9 +38,10 @@ export default function AuthorTemplate({ data }) {
 
                           <div className="mb-5">
                             {author.auszeichnungen ? <div><h5 className="mb-3"><b>Auszeichnungen:</b></h5><div>{author.auszeichnungen.map(auszeichnung => (<div className="d-flex"><h5 style={{marginRight: "2%"}}><b>{auszeichnung.jahr}</b></h5><h5>{auszeichnung.titel}</h5></div>))}</div></div> : ''}
+                            {author.auszeichnungen ? <>{author.auszeichnungen.map(auszeichnung => (<img src={auszeichnung.image.url}/>))}</> : ''}
                           </div>
 
-                          {author.youtubeKanal ? <div className="mb-5"><h5 className="mb-3"><b>Youtube Kanal von Gernot Maria Grohs:</b></h5><a href={author.youtubeKanal.link}><img src={author.youtubeKanal.image.url}/></a></div> : <h1>hihinein</h1>}
+                          {author.youtubeKanal ? <div className="mb-5"><h5 className="mb-3"><b>Youtube Kanal von Gernot Maria Grohs:</b></h5><a href={author.youtubeKanal.link}><img src={author.youtubeKanal.image.url}/></a></div> : ''}
 
 
                   <div className="mb-5">
@@ -70,17 +71,7 @@ export default function AuthorTemplate({ data }) {
 
                                             <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
 
-                                            <div className="mt-3">
-                                              <p className="mb-3">hier bestellen: </p>
-                                              <div className="d-flex">
-                                                {b.haendlerLink.map(h => (
-                                                    <div style={{marginRight: "10%", gap: "10%"}}>
-                                                      <a href={h.link}><img style={{maxWidth: "120px"}}src={h.haendler.logo.url}/></a>
-                                                    </div>
-                                                )
-                                                                   )}
-                                              </div>
-                                            </div>
+                                            {b.haendlerLink? <div className="mt-3"><p className="mb-3">hier bestellen: </p><div className="d-flex">{b.haendlerLink.map(h => (<div style={{marginRight: "10%", gap: "10%"}}><a href={h.link}><img style={{maxWidth: "120px"}}src={h.haendler.logo.url}/></a></div>))}</div></div> : ''}
 
                                           </div>
                                         </div>
