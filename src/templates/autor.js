@@ -54,18 +54,34 @@ export default function AuthorTemplate({ data }) {
                                           className="d-flex author-books-container"
                                           style={{gap: "5%", marginRight: "5%"}}
                                         >
-                                          <GatsbyImage image={cover} style={{minWidth: "8em", maxWidth: "10em"}}/>
+                                          <div>
+                                            <GatsbyImage image={cover} style={{width: "13em"}}/>
+                                          </div>
                                           <div>
                                             <h5 style={{fontWeight: "bold"}}>{b.title}</h5>
                                             <p className="mb-2">{b.subtitle}</p>
                                             <p className="mb-3" style={{fontSize: "12px"}}>
-                                            <MDXProvider>
-                                              <MDXRenderer>
-                                                {b.details.childMdx.body}
-                                              </MDXRenderer>
-                                      </MDXProvider>
-                                      </p>
+                                              <MDXProvider>
+                                                <MDXRenderer>
+                                                  {b.details.childMdx.body}
+                                                </MDXRenderer>
+                                              </MDXProvider>
+                                            </p>
+
                                             <Link to={`../../buecher/${b.slug}`} className="link">mehr erfahren</Link>
+
+                                            <div className="mt-3">
+                                              <p className="mb-3">hier bestellen: </p>
+                                              <div className="d-flex">
+                                                {b.haendlerLink.map(h => (
+                                                    <div style={{marginRight: "10%", gap: "10%"}}>
+                                                      <a href={h.link}><img style={{maxWidth: "120px"}}src={h.haendler.logo.url}/></a>
+                                                    </div>
+                                                )
+                                                                   )}
+                                              </div>
+                                            </div>
+
                                           </div>
                                         </div>
                                       </div>
@@ -105,6 +121,14 @@ auszeichnungen {
         titel
       }
       book {
+ haendlerLink {
+          link
+          haendler {
+            logo {
+              url
+            }
+          }
+        }
         details {
           childMdx {
             body
