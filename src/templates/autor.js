@@ -118,7 +118,7 @@ export default function AuthorTemplate (props) {
 
                           <br/>
                           <br/>
-                            {author.name == "Gernot Maria Grohs" ? <WeitereBuecher/> : <h1>nein</h1>}
+                            {author.name == "Gernot Maria Grohs" ? <WeitereBuecher/> : ''}
 
                         </div>
                       </div>
