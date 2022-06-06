@@ -70,6 +70,7 @@ function VideoBanner(){
                      video.setAttribute("muted", "false")
             video.muted = !video.muted;
             document.getElementById("video-modal").style.display = "none"
+
         } else {
             console.log("hi")
         }
@@ -109,7 +110,7 @@ function VideoBanner(){
                 Ton einschalten mit Klick
               </div>
           )}
-          <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}}>
+          <video autoPlay muted id="homepage-video" className="video-section" style={{width: "100%"}} controls>
             <source src={lesung} type="video/mp4" />
           </video>
         </div>
