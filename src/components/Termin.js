@@ -28,8 +28,8 @@ export default function Termin() {
           {data.allContentfulTermin.nodes.map(termin => {
               const image = getImage(termin.image)
               return(
-                  <div style={{width: "100%", background: "#B5CEB1"}}>
-                    <div className="termin d-flex m-3 p-3 justify-content-between" style={{gap: "5em"}}>
+                  <div style={{width: "100%", background: "#B5CEB1", padding: "0% 2.5%"}}>
+                    <div className="termin d-flex m-3 p-3 justify-content-between">
                       <div className="d-flex" style={{gap: "1em"}}>
                         <GatsbyImage style={{marginRight: "1em"}} image={image}/>
                         <h3 className="mt-4" style={{fontWeight: "bold"}}>{termin.autor}</h3>
