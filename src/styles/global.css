@@ -29,10 +29,23 @@ h5 {
     font-size: 1.1em !important;
 }
 
+h6 {
+    font-size: 0.9em;
+}
+
 p {
     font-size: 1em;
     margin: 0 !important;
 }
+
+#weiterebuecher p {
+    font-size: 0.9em;
+}
+
+#weiterebuecher h6 {
+    font-weight: bold;
+}
+
 
 .link:hover, .narbenlink:active, .narbenlink:focus {
     color: rgb(102,153,153) !important;
