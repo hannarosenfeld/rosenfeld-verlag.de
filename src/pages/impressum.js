@@ -33,6 +33,8 @@ const Impressum = () => (
         </p>
       </div>
       <br/>
+      <br/>
+      <br/>
       <div id="datenschutz">
         <h2>Datenschutzhinweise</h2>
         Datenschutzhinweise des Rosenfeld Verlages als Teil der Rosenfeld CC GmbH, Westerbachstr. 50, 60489 Frankfurt am Main
