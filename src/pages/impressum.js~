@@ -1,0 +1,48 @@
+import React from 'react'
+
+const Impressum = () => (
+Hallo Hanna,
+
+
+
+anbei die aktuelle Version des Impressums und der Datenschutzrichtlinien.
+
+Zusammen mit den Allgemeinen Geschäftsbedingungen kann das alles auf eine Seite untereinander.
+
+
+
+LG Papa
+
+
+
+
+
+Impressum
+
+Verantwortlich für den Inhalt
+
+Rosenfeld Verlag
+Erfurter Str. 104
+99427 Weimar
+
+﻿Der Rosenfeld Verlag ist ein Unternehmen der Rosenfeld CC GmbH
+<br/>
+Rosenfeld CC GmbH
+Westerbachstraße 50
+60489 Frankfurt am Main
+<br/>
+Geschäftsführer: Theo Rosenfeld
+Handelsregistereintrag: Amtsgericht Frankfurt/Main HRB 93629
+USt. Id.-Nr. DE270348335
+<br/>
+
+Sämtliche auf der Website der Rosenfeld CC GmbH erhobenen persönlichen Daten werden ausschließlich zu Ihrer individuellen Betreuung, der Übersendung von Produktinformationen oder der Unterbreitung von Angeboten gespeichert, verarbeitet und ggfs. an Rosenfeld CC GmbH Partnerunternehmen weitergegeben. Die Rosenfeld CC GmbH sichert zu, dass Ihre Angaben entsprechend den datenschutzrechtlichen Bestimmungen vertraulich behandelt werden.
+</p>
+
+
+<h3>Copyright</h3>
+<p>
+© Copyright 2022 Rosenfeld Verlag/Rosenfeld CC GmbH, Weimar und Frankfurt am Main, Deutschland
+    Alle Rechte vorbehalten. Alle Inhalte, wie Text, Bilder, Grafiken, Sound, Animationen und Videos sowie deren Anordnung auf den Websites des Rosenfeld Verlags, unterliegen dem Schutz des Urheberrechts und anderer Schutzgesetze. Der Inhalt dieser Websites darf nicht zu kommerziellen Zwecken kopiert, verbreitet, verändert oder Dritten zugänglich gemacht werden. Einige Rosenfeld Verlag Websites enthalten außerdem Inhalte, die dem Copyright Dritter unterliegen oder unterliegen können.
+</p>
+)
