@@ -16,7 +16,6 @@ const Impressum = () => (
         <p>Rosenfeld CC GmbH</p>
         <p>Westerbachstraße 50</p>
         <p>60489 Frankfurt am Main</p>
-        <br/>
         <p>Geschäftsführer: Theo Rosenfeld</p>
         <p>Handelsregistereintrag: Amtsgericht Frankfurt/Main HRB 93629</p>
         <p>USt. Id.-Nr. DE270348335</p>
