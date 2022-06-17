@@ -13,7 +13,6 @@ const Impressum = () => (
           <p>99427 Weimar</p>
         </div>
         ﻿Der Rosenfeld Verlag ist ein Unternehmen der Rosenfeld CC GmbH
-        <br/>
         <p>Rosenfeld CC GmbH</p>
         <p>Westerbachstraße 50</p>
         <p>60489 Frankfurt am Main</p>
@@ -21,7 +20,6 @@ const Impressum = () => (
         <p>Geschäftsführer: Theo Rosenfeld</p>
         <p>Handelsregistereintrag: Amtsgericht Frankfurt/Main HRB 93629</p>
         <p>USt. Id.-Nr. DE270348335</p>
-        <br/>
         <p>
           Sämtliche auf der Website der Rosenfeld CC GmbH erhobenen persönlichen Daten werden ausschließlich zu Ihrer individuellen Betreuung, der Übersendung von Produktinformationen oder der Unterbreitung von Angeboten gespeichert, verarbeitet und ggfs. an Rosenfeld CC GmbH Partnerunternehmen weitergegeben. Die Rosenfeld CC GmbH sichert zu, dass Ihre Angaben entsprechend den datenschutzrechtlichen Bestimmungen vertraulich behandelt werden.
         </p>
