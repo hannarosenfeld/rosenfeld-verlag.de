@@ -24,7 +24,7 @@ function BestellForm() {
     return (
         <>
           <Button className="bestell-button" variant="primary" onClick={handleShow}>
-            Versandtkostenfrei bestellen
+            Versandkostenfrei bestellen
           </Button>
 
           <Modal show={show} onHide={handleClose}>
@@ -39,7 +39,7 @@ function BestellForm() {
                   <p className="mb-3 d-flex align-items-baseline">
                     Hier mit bestelle ich <Form.Control name="Anzahl" value={count} onChange={(e) => setCount(e.target.value)} style={{margin: "0 0.5em", width: "4em"}} type="number" min="1" max="100" /> Exemplar(e).
                   </p>
-                  <p>Kosten: { count * 12.90 }  EUR (Versand kostenfrei)</p>
+                  <p>Kosten: { count * 12.90 }  EUR (Versandkostenfrei)</p>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicAddress">
                   {/* <Form.Label>Anschrift</Form.Label> */}
