@@ -8,19 +8,19 @@ const Impressum = () => (
         <h2>Impressum</h2>
         <p>Verantwortlich für den Inhalt</p>
         <div>
-          Rosenfeld Verlag
-          Erfurter Str. 104
-          99427 Weimar
+          <p>Rosenfeld Verlag</p>
+          <p>Erfurter Str. 104</p>
+          <p>99427 Weimar</p>
         </div>
         ﻿Der Rosenfeld Verlag ist ein Unternehmen der Rosenfeld CC GmbH
         <br/>
-        Rosenfeld CC GmbH
-        Westerbachstraße 50
-        60489 Frankfurt am Main
+        <p>Rosenfeld CC GmbH</p>
+        <p>Westerbachstraße 50</p>
+        <p>60489 Frankfurt am Main</p>
         <br/>
-        Geschäftsführer: Theo Rosenfeld
-        Handelsregistereintrag: Amtsgericht Frankfurt/Main HRB 93629
-        USt. Id.-Nr. DE270348335
+        <p>Geschäftsführer: Theo Rosenfeld</p>
+        <p>Handelsregistereintrag: Amtsgericht Frankfurt/Main HRB 93629</p>
+        <p>USt. Id.-Nr. DE270348335</p>
         <br/>
         <p>
           Sämtliche auf der Website der Rosenfeld CC GmbH erhobenen persönlichen Daten werden ausschließlich zu Ihrer individuellen Betreuung, der Übersendung von Produktinformationen oder der Unterbreitung von Angeboten gespeichert, verarbeitet und ggfs. an Rosenfeld CC GmbH Partnerunternehmen weitergegeben. Die Rosenfeld CC GmbH sichert zu, dass Ihre Angaben entsprechend den datenschutzrechtlichen Bestimmungen vertraulich behandelt werden.
@@ -95,13 +95,14 @@ const Impressum = () => (
     </div>
     <br/>
         <div>
-        <b>3. Weitergabe von Daten an Dritte</b>
-    Eine Übermittlung Ihrer personenbezogenen Daten an Dritte findet grundsätzlich nicht statt. Ausnahmen hiervon gelten nur, soweit dies für die Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist. Hierzu zählt insbesondere die Weitergabe an von uns beauftragte Dienstleister (sog. Auftragsverarbeiter) oder sonstige Dritte, deren Tätigkeit für die Vertragsdurchführung erforderlich ist (z.B. Versandunternehmen oder Banken). Die weitergegebenen Daten dürfen von den Dritten ausschließlich zu den genannten Zwecken verwendet werden.
+          <b>3. Weitergabe von Daten an Dritte</b>
+          <p>
+    Eine Übermittlung Ihrer personenbezogenen Daten an Dritte findet grundsätzlich nicht statt. Ausnahmen hiervon gelten nur, soweit dies für die Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist. Hierzu zählt insbesondere die Weitergabe an von uns beauftragte Dienstleister (sog. Auftragsverarbeiter) oder sonstige Dritte, deren Tätigkeit für die Vertragsdurchführung erforderlich ist (z.B. Versandunternehmen oder Banken). Die weitergegebenen Daten dürfen von den Dritten ausschließlich zu den genannten Zwecken verwendet werden.</p>
         </div>
         <br/>
         <div>
         <b>4. Ihre Rechte als betroffene Person</b>
-          Ihnen als von der Datenverarbeitung betroffenen Person stehen verschiedene Rechte zu:
+          <p>Ihnen als von der Datenverarbeitung betroffenen Person stehen verschiedene Rechte zu:</p>
           <ul>
     <li>Widerrufsrecht: Von Ihnen erteilte Einwilligungen können Sie jederzeit uns gegenüber widerrufen. Die Datenverarbeitung, die auf der widerrufenen Einwilligung beruht, darf dann für die Zukunft nicht mehr fortgeführt werden.</li>
 
