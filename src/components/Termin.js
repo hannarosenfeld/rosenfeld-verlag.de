@@ -36,7 +36,7 @@ export default function Termin() {
                       </div>
                       <div className="mt-4 d-flex" style={{gap: "1em"}}>
                         <div>
-                          <FaCalendar style={{fontSize: "4em", margin: "0 0.2em"}} />
+                          <FaCalendar style={{fontSize: "2em", margin: "0 0.2em"}} />
                         </div>
                         <div>
                           <p style={{fontWeight: "bold"}}>{termin.datum} / {termin.title}</p>

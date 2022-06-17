@@ -70,7 +70,7 @@ query($slug: String!) {
         link
         haendler {
           logo {
-            gatsbyImageData(width: 120)
+            gatsbyImageData(width: 220)
           }
         }
       }
