@@ -1,0 +1,18 @@
+.btn-primary{
+    background: none;
+    border: none;
+    color: var(--bs-body-color);
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    color: rgb(102,153,153) !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.form-control {
+    margin: 0.3em 0;
+}

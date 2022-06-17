@@ -6,6 +6,7 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 import Layout from '../components/Layout'
 import HaendlerLinks from '../components/HaendlerLinks'
+import BestellForm from '../components/BestellForm.js'
 
 import amazon from '../images/amazon.png'
 
@@ -43,6 +44,8 @@ export default function BookTemplate({ data }) {
                             </MDXRenderer>
                           </MDXProvider>
                         </div>
+                        <br/>
+                        {book.title == "Narben" ? <BestellForm/> : ''}
                       </div>
                     </div>
                   </div>
