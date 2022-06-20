@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
+import { Link } from 'gatsby'
 import { Form, Button, Modal } from 'react-bootstrap'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { send } from 'emailjs-com';
+import { send } from 'emailjs-com'
 
 import './BestellForm.css'
 
@@ -52,6 +53,7 @@ function BestellForm() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check style={{fontSize: "0.8em"}} required type="checkbox" label="Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien habe ich gelesen und akzeptiert." name="check"/>
+                  <p className="mt-1" style={{marginLeft: "3em", fontSize: "0.8em"}}>Unsere Geschäftsbedingungen und Datenschutzhinweise finden sie <Link to="/impressum"><u>hier</u></Link></p>
                 </Form.Group>
                 <Button className="bestell-button" variant="primary" type="submit">
                   Bestellung absenden
